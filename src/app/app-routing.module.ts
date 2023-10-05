@@ -6,6 +6,7 @@ import { EmicalculatorComponent } from './includes/emicalculator/emicalculator.c
 import { EnquiryComponent } from './includes/enquiry/enquiry.component';
 import { LoginComponent } from './entry/login/login.component';
 import { ApplicationDashboardComponent } from './entry/application-dashboard/application-dashboard.component';
+import { LocateComponent } from './includes/locate/locate.component';
 
 const routes: Routes = [
   
@@ -16,7 +17,8 @@ const routes: Routes = [
       {path:'enquiry',component:EnquiryComponent},
       {path:'login',component:LoginComponent},{
         path:'home',component:HomeDashboardComponent
-      }
+      },
+      {path:'locate',component:LocateComponent}
 ,
   
   {
