@@ -1,5 +1,11 @@
 button{
-    background-color: rgb(91, 177, 205);
-    border-radius: 50px;
+ 
+    background: rgb(207,255,244);
+    background: linear-gradient(90deg, rgb(242, 225, 217) 0%, rgb(250, 74, 74) 92%);
+    border-radius: 20px;
     padding: 5px 10px;
+}
+#firstbox{
+    background: rgb(207,255,244);
+    background: linear-gradient(90deg, rgba(207,255,244,1) 0%, rgba(11,9,150,1) 92%);
 }
