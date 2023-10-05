@@ -7,7 +7,7 @@ export class UserOptions {
                   {label:'Add Enquiry' , path:'addenq'},
                   {label:'View Enquiry' , path :'viewenq'},
                   {label:'Apply For Loan', path:'applyloan'},
-                  {label:'EMI Calculator' , path:'emi'}
+                  {label:'EMI Calculator' , path:'emi_calc'}
                 ],
             oe:[
               {label:'Check cibil' , path:'check_cibil'},
