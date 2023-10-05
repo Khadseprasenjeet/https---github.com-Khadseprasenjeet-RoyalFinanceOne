@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class EmicalculatorComponent {
 
-  loanAmount: number = 200000;
-  tenure: number = 10;
-  interest: number = 5;
+  loanAmount: number = 0;
+  tenure: number = 0;
+  interest: number = 0;
   emi: number = 0;
   cal() {
     var outstandingAmount =
