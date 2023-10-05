@@ -51,6 +51,7 @@ import { MatTreeModule } from '@angular/material/tree';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { AppHeaderComponent } from './templates/app-header/app-header.component';
 import { HomeHeaderComponent } from './templates/home-header/home-header.component';
+import { LocateComponent } from './includes/locate/locate.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { HomeHeaderComponent } from './templates/home-header/home-header.compone
     MenuComponent,
     UsertypePipe,
     AppHeaderComponent,
-    HomeHeaderComponent
+    HomeHeaderComponent,
+    LocateComponent
   ],
   imports: [
     BrowserModule,
