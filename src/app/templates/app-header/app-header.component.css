@@ -1,6 +1,6 @@
 nav{
-    background: rgb(207,255,244);
-    background: linear-gradient(90deg, rgba(207,255,244,1) 0%, rgba(11,9,150,1) 92%);
+    background: rgb(84, 197, 226);
+    background: linear-gradient(90deg, rgba(207,255,244,1) 0%, rgb(238, 77, 77) 92%);
     display: flex;
     justify-content: right;
     height: 50px;
