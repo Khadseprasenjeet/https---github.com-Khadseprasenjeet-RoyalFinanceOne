@@ -8,9 +8,21 @@ import { Enquiry } from 'src/app/model/enquiry';
 export class CommonService {
 
   constructor(private http:HttpClient) { }
+  enq:Enquiry={
+    enquiryId: 0,
+    customerName: undefined,
+    pancardNumber: 0,
+    customerMobileNumber: 0,
+    customerAlternateMobileNumber: 0,
+    customerEmailId: undefined,
+    customerDateOfBirth: 0
+  }
   saveEnquiryData(en:Enquiry){
 
     return this.http.post("http://localhost:3000/Enquiry",en);
 
+  }
+  getEnquiry(){
+    return this.http.get("http://localhost:3000/Enquiry");
   }
 }
