@@ -5,6 +5,7 @@ import { RelationshipexecutiveRoutingModule } from './relationshipexecutive-rout
 import { ViewenquiryComponent } from './viewenquiry/viewenquiry.component';
 import { CreateenquiryComponent } from './createenquiry/createenquiry.component';
 import { ApplyloanComponent } from './applyloan/applyloan.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ApplyloanComponent } from './applyloan/applyloan.component';
   ],
   imports: [
     CommonModule,
-    RelationshipexecutiveRoutingModule
+    RelationshipexecutiveRoutingModule,FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class RelationshipexecutiveModule { }

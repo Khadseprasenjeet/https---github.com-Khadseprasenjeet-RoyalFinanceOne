@@ -1,0 +1,12 @@
+{
+  "Enquiry": {
+    "enquiryId": null,
+    "customerName": "Abhishek",
+    "pancardNumber": "GKZPK9636v",
+    "customerMobileNumber": 7894652138,
+    "customerAlternateMobileNumber": 7057279657,
+    "customerEmailId": "abc@gmail.com",
+    "customerDateOfBirth": "2023-10-10"
+   
+  }
+}
