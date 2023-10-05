@@ -53,6 +53,7 @@ import { AppHeaderComponent } from './templates/app-header/app-header.component'
 import { HomeHeaderComponent } from './templates/home-header/home-header.component';
 import { LocateComponent } from './includes/locate/locate.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,7 +68,7 @@ import { LocateComponent } from './includes/locate/locate.component';
     UsertypePipe,
     AppHeaderComponent,
     HomeHeaderComponent,
-    LocateComponent
+    LocateComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,401 @@
-<p>applyloan works!</p>
+<div style="display: flex;justify-content: center;margin: 60px; margin-top: 0px;"> <mat-stepper #stepper id="step">
+    <mat-step [stepControl]="firstFormGroup" errorMessage="Name is required." >
+        <form [formGroup]="firstFormGroup" >
+            <ng-template matStepLabel>Personal Details</ng-template>
+            <mat-form-field>
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="First name" formControlName="firstName" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label> Middle Name</mat-label>
+                <input matInput placeholder="Middle name" formControlName="middleName" required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label> Last Name</mat-label>
+                <input matInput placeholder="Last name" formControlName="lastName" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label> Mother Name</mat-label>
+                <input matInput placeholder="Mother  name" formControlName="motherName" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label> Mother Name</mat-label>
+                <input matInput placeholder="Mother  name" formControlName="motherName" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label> Mother Name</mat-label>
+                <input matInput placeholder="Mother  name" formControlName="motherName" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label> Date Of Birth</mat-label>
+                <input matInput placeholder="Date of Birth" formControlName="dob" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Select Gender</mat-label>
+                <mat-select [(value)]="selected">
+                    <mat-option>None</mat-option>
+                    <mat-option value="option1">Male</mat-option>
+                    <mat-option value="option2">Female</mat-option>
+                    <mat-option value="option3">Other</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Mobile Number</mat-label>
+                <input matInput placeholder="Mobile Number" formControlName="mobileNumber" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" formControlName="email" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Aadhar Card </mat-label>
+                <input matInput placeholder="Aadhar" formControlName="adharNumber" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>PAN Card </mat-label>
+                <input matInput placeholder="PAN" formControlName="pan" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Select an option</mat-label>
+                <mat-select [(value)]="selected">
+                    <mat-option>None</mat-option>
+                    <mat-option value="option1">Married</mat-option>
+                    <mat-option value="option2">Unmarried</mat-option>
+                    <mat-option value="option3">Divorsed</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+
+
+
+
+
+
+            <div>
+
+                <p>Go to a different step to see the error state</p>
+                <button mat-button matStepperNext color="primary">Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" errorMessage="Address is required.">
+        <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Permenenet Address</ng-template>
+            <mat-form-field>
+                <mat-label>House Number</mat-label>
+                <input matInput placeholder="Ex. 1 Main St, New York, NY" formControlName="houseNumber" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Landmark</mat-label>
+                <input matInput placeholder="Ex. near RTO Office" formControlName="landmark" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Street Name</mat-label>
+                <input matInput placeholder="karve road" formControlName="streetName" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>City Name</mat-label>
+                <input matInput placeholder="Pune" formControlName="cityName" required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Taluka Name</mat-label>
+                <input matInput placeholder="Haveli" formControlName="taluka" required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>District</mat-label>
+                <input matInput placeholder="Pune" formControlName="district" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>State</mat-label>
+                <input matInput placeholder="Maharashtra" formControlName="state" required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Country</mat-label>
+                <input matInput placeholder="India" formControlName="country" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Pincode</mat-label>
+                <input matInput placeholder="411052" formControlName="pincode" required>
+            </mat-form-field>
+
+            <div>
+                <p>Go to a different step to see the error state</p>
+                <button mat-button matStepperPrevious color="primary">Back</button>
+                <button mat-button matStepperNext color="primary">Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup" errorMessage="Address is required.">
+        <form [formGroup]="thirdFormGroup">
+            <ng-template matStepLabel>Local Address</ng-template>
+            <mat-checkbox class="example-margin" [(ngModel)]="indeterminate">Permenant Address same as local address
+            </mat-checkbox>
+            <mat-form-field>
+                <mat-label>House Number</mat-label>
+                <input matInput placeholder="Ex. 1 Main St, New York, NY" formControlName="houseNumber" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Landmark</mat-label>
+                <input matInput placeholder="Ex. near RTO Office" formControlName="landmark" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Street Name</mat-label>
+                <input matInput placeholder="karve road" formControlName="streetName" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>City Name</mat-label>
+                <input matInput placeholder="Pune" formControlName="cityName" required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Taluka Name</mat-label>
+                <input matInput placeholder="Haveli" formControlName="taluka" required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>District</mat-label>
+                <input matInput placeholder="Pune" formControlName="district" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>State</mat-label>
+                <input matInput placeholder="Maharashtra" formControlName="state" required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Country</mat-label>
+                <input matInput placeholder="India" formControlName="country" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Pincode</mat-label>
+                <input matInput placeholder="411052" formControlName="pincode" required>
+            </mat-form-field>
+
+            <div>
+                <p>Go to a different step to see the error state</p>
+                <button mat-button matStepperPrevious  color="primary">Back</button>
+                <button mat-button matStepperNext color="primary">Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="fourthFormGroup" errorMessage="Bank Details are required.">
+        <form [formGroup]="fourthFormGroup">
+            <ng-template matStepLabel>Bank Details</ng-template>
+           
+           
+            <mat-form-field>
+                <mat-label>Account Holder Name</mat-label>
+                <input matInput placeholder="Mr XYZ" formControlName="accountHolderName" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Bank ACCount Numberr</mat-label>
+                <input matInput placeholder="Ex. near RTO Office" formControlName="bankAccountNumber" required>
+            </mat-form-field>
+
+
+            <mat-form-field>
+                <mat-label>Bank Name</mat-label>
+                <input matInput placeholder="karve road" formControlName="Bank Name" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>IFSC Code</mat-label>
+                <input matInput placeholder="BKID0009660" formControlName="IFSC Code" required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Branch Name</mat-label>
+                <input matInput placeholder="karvenagar" formControlName="Branch Name" required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Select an Account Type</mat-label>
+                <mat-select [(value)]="selected">
+                    <mat-option value="option1">Saving</mat-option>
+                    <mat-option value="option2">Current</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Country</mat-label>
+                <input matInput placeholder="India" formControlName="country" required>
+            </mat-form-field>
+          
+
+            <div>
+                <p>Go to a different step to see the error state</p>
+                <button mat-button matStepperPrevious color="primary">Back</button>
+                <button mat-button matStepperNext color="primary">Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="fifthFormGroup" errorMessage="Documents are required.">
+        <form [formGroup]="fifthFormGroup">
+            <ng-template matStepLabel>Documents</ng-template>
+           
+            <mat-form-field>
+                <div>
+                  <mat-toolbar>
+                    <!-- Display files names -->
+                    <input matInput [(ngModel)]="fileAttr" readonly name="name" />
+                    <!-- Browse Button -->
+                    <button mat-flat-button color="primary">Browse File</button>
+                  </mat-toolbar>
+                  <!-- Fetch selected filed on change -->
+                  <input
+                    type="file"
+                    #fileInput
+                    id="uploadFile"
+                    (change)="uploadFileEvt($event)"
+                    name="uploadFile"
+                    multiple="multiple"
+                    accept="image/*"
+                  />
+                </div>
+              </mat-form-field>
+              <mat-form-field>
+                <div>
+                  <mat-toolbar>
+                    <!-- Display files names -->
+                    <input matInput [(ngModel)]="fileAttr" readonly name="name" />
+                    <!-- Browse Button -->
+                    <button mat-flat-button color="primary">Browse File</button>
+                  </mat-toolbar>
+                  <!-- Fetch selected filed on change -->
+                  <input
+                    type="file"
+                    #fileInput
+                    id="uploadFile"
+                    (change)="uploadFileEvt($event)"
+                    name="uploadFile"
+                    multiple="multiple"
+                    accept="image/*"
+                  />
+                </div>
+              </mat-form-field>
+              <mat-form-field>
+                <div>
+                  <mat-toolbar>
+                    <!-- Display files names -->
+                    <input matInput [(ngModel)]="fileAttr" readonly name="name" />
+                    <!-- Browse Button -->
+                    <button mat-flat-button color="primary">Browse File</button>
+                  </mat-toolbar>
+                  <!-- Fetch selected filed on change -->
+                  <input
+                    type="file"
+                    #fileInput
+                    id="uploadFile"
+                    (change)="uploadFileEvt($event)"
+                    name="uploadFile"
+                    multiple="multiple"
+                    accept="image/*"
+                  />
+                </div>
+              </mat-form-field>
+              <mat-form-field>
+                <div>
+                  <mat-toolbar>
+                    <!-- Display files names -->
+                    <input matInput [(ngModel)]="fileAttr" readonly name="name" />
+                    <!-- Browse Button -->
+                    <button mat-flat-button color="primary">Browse File</button>
+                  </mat-toolbar>
+                  <!-- Fetch selected filed on change -->
+                  <input
+                    type="file"
+                    #fileInput
+                    id="uploadFile"
+                    (change)="uploadFileEvt($event)"
+                    name="uploadFile"
+                    multiple="multiple"
+                    accept="image/*"
+                  />
+                </div>
+              </mat-form-field>
+              <mat-form-field>
+                <div>
+                  <mat-toolbar>
+                    <!-- Display files names -->
+                    <input matInput [(ngModel)]="fileAttr" readonly name="name" />
+                    <!-- Browse Button -->
+                    <button mat-flat-button color="primary">Browse File</button>
+                  </mat-toolbar>
+                  <!-- Fetch selected filed on change -->
+                  <input
+                    type="file"
+                    #fileInput
+                    id="uploadFile"
+                    (change)="uploadFileEvt($event)"
+                    name="uploadFile"
+                    multiple="multiple"
+                    accept="image/*"
+                  />
+                </div>
+              </mat-form-field>
+              <mat-form-field>
+                <div>
+                  <mat-toolbar>
+                    <!-- Display files names -->
+                    <input matInput [(ngModel)]="fileAttr" readonly name="name" />
+                    <!-- Browse Button -->
+                    <button mat-flat-button color="primary">Browse File</button>
+                  </mat-toolbar>
+                  <!-- Fetch selected filed on change -->
+                  <input
+                    type="file"
+                    #fileInput
+                    id="uploadFile"
+                    (change)="uploadFileEvt($event)"
+                    name="uploadFile"
+                    multiple="multiple"
+                    accept="image/*"
+                  />
+                </div>
+              </mat-form-field>
+              <mat-form-field>
+                <div>
+                  <mat-toolbar>
+                    <!-- Display files names -->
+                    <input matInput [(ngModel)]="fileAttr" readonly name="name" />
+                    <!-- Browse Button -->
+                    <button mat-flat-button color="primary">Browse File</button>
+                  </mat-toolbar>
+                  <!-- Fetch selected filed on change -->
+                  <input
+                    type="file"
+                    #fileInput
+                    id="uploadFile"
+                    (change)="uploadFileEvt($event)"
+                    name="uploadFile"
+                    multiple="multiple"
+                    accept="image/*"
+                  />
+                </div>
+              </mat-form-field>
+            
+          
+
+            <div>
+                
+                <button mat-button matStepperPrevious color="primary">Back</button>
+                <button mat-button matStepperNext color="primary">Next</button>
+            </div>
+        </form>
+    </mat-step>
+
+    <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <p>Submit  Your Form </p>
+        <div>
+            <button mat-button matStepperPrevious color="primary">Back</button>
+            
+            <button mat-button (click)="stepper.reset()">Reset</button>
+
+
+            <button mat-button matSubmit color="primary">Submit</button>
+        </div>
+    </mat-step>
+</mat-stepper></div>

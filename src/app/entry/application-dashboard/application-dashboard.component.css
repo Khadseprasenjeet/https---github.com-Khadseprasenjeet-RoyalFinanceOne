@@ -6,8 +6,12 @@
     
 }
 .menu{
-    width: 200px;
+    width: 210px;
     background: rgb(207,255,244);
     background: linear-gradient(90deg, rgba(207,255,244,1) 0%, rgba(11,9,150,1) 92%);
     height: 350px;
+}
+.routeroutlet{
+  width:90%;
+
 }

@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { RelationshipexecutiveRoutingModule } from './relationshipexecutive-routing.module';
 import { ViewenquiryComponent } from './viewenquiry/viewenquiry.component';
 import { CreateenquiryComponent } from './createenquiry/createenquiry.component';
-import { ApplyloanComponent } from './applyloan/applyloan.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -12,7 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     ViewenquiryComponent,
     CreateenquiryComponent,
-    ApplyloanComponent
+    
   ],
   imports: [
     CommonModule,
