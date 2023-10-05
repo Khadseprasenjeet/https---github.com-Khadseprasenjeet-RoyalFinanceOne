@@ -1,0 +1,32 @@
+/* .abc{
+
+display: flex;
+justify-content: space-around;
+
+
+}
+img{
+margin-top: 5px;
+
+
+} */
+
+.mat-toolbar {
+  background-color: rgb(237, 237, 242);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.mat-button {
+  color: rgb(221, 20, 20);
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+img{
+  margin-top: 1px;
+height: 80px;
+width: auto;
+}

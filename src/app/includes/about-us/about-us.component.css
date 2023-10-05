@@ -1,0 +1,34 @@
+#main {
+   
+
+    
+    
+    background: rgb(207, 255, 244);
+    background: linear-gradient(90deg, rgba(207, 255, 244, 1) 0%, rgba(11, 9, 150, 1) 92%);
+
+}
+
+#firstBox {
+
+   
+    display: flex;
+    float: left;
+}
+
+#secBox {
+ 
+    justify-content: left;
+    display: flex;
+}
+
+#thirdBox {
+
+    justify-content: center;
+    display: flex;
+}
+
+#fourthBox {
+
+    justify-content: center;
+    display: flex;
+}

@@ -1,0 +1,7 @@
+
+<ul *ngFor="let menu of menus[0][type]">
+    <!-- <li><button [routerLink]="type+'/'+menu.path">{{menu.label}}</button></li> -->
+    <li><button mat-raised-button color="warn"[routerLink]="type+'/'+menu.path">{{menu.label}}</button></li>
+    
+</ul>
+

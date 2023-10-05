@@ -1,0 +1,10 @@
+.frame{
+    display: flex;
+    width: 100%;
+    
+}
+.menu{
+    width: 200px;
+    background-color: aqua;
+    height: 350px;
+}

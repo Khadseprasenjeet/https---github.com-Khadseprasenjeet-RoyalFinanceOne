@@ -1,0 +1,26 @@
+
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      
+    </div>
+
+    <!-- Login Form -->
+    <form [formGroup]="loginForm" (ngSubmit)="onUserLogin()">
+        <h1>Welcome To Secure Finance.!</h1>
+      <input type="text" id="login" class="fadeIn second" formControlName="username" placeholder="Enter Username" >
+      <input type="text" id="password" class="fadeIn third" formControlName="password" placeholder="Enter Password" >
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,19 @@
+nav{
+    background: rgb(207,255,244);
+    background: linear-gradient(90deg, rgba(207,255,244,1) 0%, rgba(11,9,150,1) 92%);
+    display: flex;
+    justify-content: right;
+    height: 50px;
+}
+h1{
+    color: white;
+    margin: 0px,5px,0px,0px;
+    padding: 0;
+    
+
+}
+button{
+    margin-left: 400px;
+    margin-top: 10px;
+    height: 30px;
+}

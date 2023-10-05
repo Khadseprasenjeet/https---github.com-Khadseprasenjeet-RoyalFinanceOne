@@ -1,0 +1,43 @@
+<div align="center">
+
+</div>
+
+<div id="main">
+    <div id="firstBox">
+        <marquee behavior="right" direction="">
+            <h2 align="center"
+                style="border: 20px;font-size: 20px;font-family: Georgia, 'Times New Roman', Times, serif;color: red;">Welcome to
+                the Secure Finance</h2>
+        </marquee>
+       
+       
+
+<div id="emitable">
+        <table class="table" align="center" style="background-color: aqua;">
+           
+            <tbody>
+              <tr>
+              
+                <td>  <label for="lon">Loan Amount</label></td>
+                <td><input id="lon" type="number" [(ngModel)]="loanAmount" /></td>
+              </tr>
+              <tr>
+               
+                <td> <label for="ten">Tenure in Months:</label> </td>
+                <td><input  id="ten" type="number" [(ngModel)]="tenure" /></td>
+              </tr>
+              <tr>
+                
+                <td><label for="int">interest:</label> </td>
+                <td><input  id="int" type="number" [(ngModel)]="interest" /></td>
+              </tr>
+              <tr>
+                <td><button mat-raised-button color="warn" (click)="cal()">Calculate</button></td>
+                <td><h1>EMI:{{ emi }}/m</h1></td>
+                
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+</div>
