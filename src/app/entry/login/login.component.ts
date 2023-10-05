@@ -8,8 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor(private fb:FormBuilder,private router:Router){}
-  loginForm:FormGroup;
+  constructor(public fb:FormBuilder,private router:Router){}
+  loginForm: FormGroup;
+  
   ngOnInit():void{
     this.loginForm=this.fb.group({
       username:[],
