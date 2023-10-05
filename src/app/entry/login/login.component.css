@@ -32,6 +32,8 @@ html {
   /* STRUCTURE */
   
   .wrapper {
+    background: rgb(207,255,244);
+  background: linear-gradient(90deg, rgba(207,255,244,1) 0%, rgba(11,9,150,1) 92%);
     display: flex;
     align-items: center;
     flex-direction: column; 
@@ -42,6 +44,8 @@ html {
   }
   
   #formContent {
+    background: rgb(207,255,244);
+  background: linear-gradient(90deg, rgba(207,255,244,1) 0%, rgba(11,9,150,1) 92%);
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
     background: #fff;
