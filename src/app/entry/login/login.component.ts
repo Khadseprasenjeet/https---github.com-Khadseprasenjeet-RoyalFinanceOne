@@ -27,7 +27,7 @@ export class LoginComponent {
     alert("Hello RE")
   this.router.navigateByUrl('/application/re')
    }
-   if(un=='admin' && ps=='admin@123')
+   else if(un=='admin' && ps=='admin@123')
    {
     sessionStorage.setItem('type','admin');
     alert("Hello Admin")
