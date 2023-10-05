@@ -21,7 +21,7 @@ export class CreateenquiryComponent {
 
 
 
-      enquiryId:[],
+     
       // id:[],
       customerName:['Daniel',[Validators.required]],
       pancardNumber:['GKZPK9636P'],
@@ -29,7 +29,7 @@ export class CreateenquiryComponent {
       customerAlternateMobileNumber:[7057279657],
       customerEmailId:['bingopanda700@gmail.com'],
       customerDateOfBirth:['15.01.1887'],
-      enquiryStatus:[''],
+      
       
     
 

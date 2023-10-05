@@ -1,12 +1,22 @@
 {
-  "Enquiry": {
-    "enquiryId": null,
-    "customerName": "Abhishek",
-    "pancardNumber": "GKZPK9636v",
-    "customerMobileNumber": 7894652138,
-    "customerAlternateMobileNumber": 7057279657,
-    "customerEmailId": "abc@gmail.com",
-    "customerDateOfBirth": "2023-10-10"
-   
-  }
+  "Enquiry": [
+    {
+      "customerName": "Abhishek",
+      "pancardNumber": "GKZPK9636P",
+      "customerMobileNumber": 7894652138,
+      "customerAlternateMobileNumber": 7057279657,
+      "customerEmailId": "abc@gmail.com",
+      "customerDateOfBirth": "2023-09-25",
+      "id": 1
+    },
+    {
+      "customerName": "Himanshu Khode",
+      "pancardNumber": "GKZPK9636P",
+      "customerMobileNumber": 4657894523,
+      "customerAlternateMobileNumber": 7057279657,
+      "customerEmailId": "him@gmail.com",
+      "customerDateOfBirth": "15.01.1887",
+      "id": 2
+    }
+  ]
 }
