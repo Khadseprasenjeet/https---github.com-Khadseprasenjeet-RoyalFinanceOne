@@ -3,7 +3,7 @@
 <div class="container-fluid"> <div class=" text-center mt-5 ">
     <h2><b>Car Loan Enquiry Form</b></h2>
 </div>
-<!-- <form [formGroup]="enquiryForm" (ngSubmit)="onSubmit()"> -->
+
 <div class="row ">
     <div class="col-lg-12 mx-auto">
         <div class="card mt-2 mx-auto p-2 bg-dark">
@@ -13,9 +13,7 @@
                         <div class="controls">
                             <div class="row">
 
-                                <!-- <div class="col-md-6">
-                                    <div class="form-group"> <label  style="font-size: large;">Customer Id *</label> <input  type="number" formControlName="id" class="form-control" placeholder="Please Enter Customer Id *" required="required" data-error="Firstname is required."> </div>
-                                </div> -->
+                                
 
                                 <div class="col-md-6">
                                     <div class="form-group"> <label  style="font-size: large;">Customer Name *</label> <input  type="text" formControlName="customerName" class="form-control" placeholder="Please Enter Customer Name *" required="required" data-error="Firstname is required."> </div>
@@ -40,19 +38,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group"> <label  style="font-size: large;">DOB *</label> <input  type="date" formControlName="customerDateOfBirth" class="form-control"  required="required" data-error="Valid email is required."> </div>
                                 </div>
-                                <!-- <div class="col-md-6">
-                                    <div class="form-group"> <label for="form_need" style="font-size: large;">Enquiry Status *</label> <input  type="text" formControlName="enquiryStatus" class="form-control"  required="required" data-error="Valid email is required."> </div>
-                                </div> -->
-
-                                <!-- <div class="col-md-6">
-                                    <div class="form-group"> <label for="form_need">Please specify your need *</label> <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
-                                            <option value="" selected disabled>--Select Your Issue--</option>
-                                            <option>Request Invoice for order</option>
-                                            <option>Request order status</option>
-                                            <option>Haven't received cashback yet</option>
-                                            <option>Other</option>
-                                        </select> </div>
-                                </div> -->
+                                
 
                                 
 
@@ -60,19 +46,19 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <button class="btn btn-success" >Submit Enquiry</button>
-                                    <!-- <button class="btn btn-success">Submit Enquiry</button> -->
+                                    
                                 </div>
                                 
-                                <!-- <div class="col-md-12"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Generate Enquiry"> </div> -->
+                                
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-        </div> <!-- /.8 -->
-    </div> <!-- /.row-->
+        </div> 
+    </div> 
 </div>
-<!-- </form> -->
+
 </div>
 <div>
     <label style="font-size: larger; color: green;"><b>{{isSubmited}}</b></label>
@@ -86,17 +72,6 @@
 
 
 
-<!-- <form [formGroup]="enquiryForm" (ngSubmit)="onSubmit()">
-    Id : <input type="text"  formControlName="id">
-   Name : <input type="text"  formControlName="customerName">
-   Pan No : <input type="text"  formControlName="pancardNumber">
-   Mobile No : <input type="text"  formControlName="customerMobileNumber">
-   Alernate Mobile No : <input type="text"  formControlName="customerAlternateMobileNumber">
-   Email : <input type="text"  formControlName="customerEmailId">
-   DOB : <input type="text"  formControlName="customerDateOfBirth">
-
-   <button>Submit</button>
-</form> -->
 
 
 
