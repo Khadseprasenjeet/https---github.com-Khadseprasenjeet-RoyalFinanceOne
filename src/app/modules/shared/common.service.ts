@@ -8,7 +8,7 @@ import { Enquiry } from 'src/app/model/enquiry';
 export class CommonService {
   createUser(formData: FormData) {
    
-
+   
 return this.http.post("",formData);
 
 
