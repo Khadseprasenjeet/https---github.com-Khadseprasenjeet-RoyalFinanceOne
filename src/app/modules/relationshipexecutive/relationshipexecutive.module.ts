@@ -5,6 +5,7 @@ import { RelationshipexecutiveRoutingModule } from './relationshipexecutive-rout
 import { ViewenquiryComponent } from './viewenquiry/viewenquiry.component';
 import { CreateenquiryComponent } from './createenquiry/createenquiry.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from 'src/app/material/material.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     RelationshipexecutiveRoutingModule,FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MaterialModule
   ]
 })
 export class RelationshipexecutiveModule { }

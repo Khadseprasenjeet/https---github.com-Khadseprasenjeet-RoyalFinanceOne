@@ -1,6 +1,8 @@
-<div style="display: flex;justify-content: center;margin: 60px; margin-top: 0px;"> <mat-stepper #stepper id="step">
-    <mat-step [stepControl]="firstFormGroup" errorMessage="Name is required." >
-        <form [formGroup]="firstFormGroup" >
+<div style=" transform:scale(.8)"> 
+    <mat-stepper [linear]="isLinear" #stepper >
+        <form [formGroup]="applyreg" (ngSubmit)="SaveCustomer()">
+    <mat-step  errorMessage="Name is required." >
+        <div formGroupName="firstFormGroup" >
             <ng-template matStepLabel>Personal Details</ng-template>
             <mat-form-field>
                 <mat-label>First Name</mat-label>
@@ -19,14 +21,7 @@
                 <mat-label> Mother Name</mat-label>
                 <input matInput placeholder="Mother  name" formControlName="motherName" required>
             </mat-form-field>
-            <mat-form-field>
-                <mat-label> Mother Name</mat-label>
-                <input matInput placeholder="Mother  name" formControlName="motherName" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label> Mother Name</mat-label>
-                <input matInput placeholder="Mother  name" formControlName="motherName" required>
-            </mat-form-field>
+           
             <mat-form-field>
                 <mat-label> Date Of Birth</mat-label>
                 <input matInput placeholder="Date of Birth" formControlName="dob" required>
@@ -65,22 +60,14 @@
                     <mat-option value="option3">Divorsed</mat-option>
                 </mat-select>
             </mat-form-field>
-
-
-
-
-
-
-
             <div>
-
                 <p>Go to a different step to see the error state</p>
-                <button mat-button matStepperNext color="primary">Next</button>
+                <button mat-button matStepperNext color="primary"  >Next</button>
             </div>
-        </form>
+        </div>
     </mat-step>
-    <mat-step [stepControl]="secondFormGroup" errorMessage="Address is required.">
-        <form [formGroup]="secondFormGroup">
+    <mat-step  errorMessage="Address is required.">
+        <div formGroupName="secondFormGroup">
             <ng-template matStepLabel>Permenenet Address</ng-template>
             <mat-form-field>
                 <mat-label>House Number</mat-label>
@@ -127,13 +114,12 @@
                 <button mat-button matStepperPrevious color="primary">Back</button>
                 <button mat-button matStepperNext color="primary">Next</button>
             </div>
-        </form>
+        </div>
     </mat-step>
-    <mat-step [stepControl]="thirdFormGroup" errorMessage="Address is required.">
-        <form [formGroup]="thirdFormGroup">
+    <mat-step  errorMessage="Address is required.">
+        <div formGroupName="thirdFormGroup">
             <ng-template matStepLabel>Local Address</ng-template>
-            <mat-checkbox class="example-margin" [(ngModel)]="indeterminate">Permenant Address same as local address
-            </mat-checkbox>
+           
             <mat-form-field>
                 <mat-label>House Number</mat-label>
                 <input matInput placeholder="Ex. 1 Main St, New York, NY" formControlName="houseNumber" required>
@@ -180,10 +166,10 @@
                 <button mat-button matStepperPrevious  color="primary">Back</button>
                 <button mat-button matStepperNext color="primary">Next</button>
             </div>
-        </form>
+        </div>
     </mat-step>
-    <mat-step [stepControl]="fourthFormGroup" errorMessage="Bank Details are required.">
-        <form [formGroup]="fourthFormGroup">
+    <mat-step  errorMessage="Bank Details are required.">
+        <div formGroupName="fourthFormGroup">
             <ng-template matStepLabel>Bank Details</ng-template>
            
            
@@ -199,16 +185,16 @@
 
             <mat-form-field>
                 <mat-label>Bank Name</mat-label>
-                <input matInput placeholder="karve road" formControlName="Bank Name" required>
+                <input matInput placeholder="karve road" formControlName="bankName" required>
             </mat-form-field>
             <mat-form-field>
                 <mat-label>IFSC Code</mat-label>
-                <input matInput placeholder="BKID0009660" formControlName="IFSC Code" required>
+                <input matInput placeholder="BKID0009660" formControlName="IFSCCode" required>
             </mat-form-field>
 
             <mat-form-field>
                 <mat-label>Branch Name</mat-label>
-                <input matInput placeholder="karvenagar" formControlName="Branch Name" required>
+                <input matInput placeholder="karvenagar" formControlName="branchName" required>
             </mat-form-field>
 
             <mat-form-field>
@@ -230,161 +216,63 @@
                 <button mat-button matStepperPrevious color="primary">Back</button>
                 <button mat-button matStepperNext color="primary">Next</button>
             </div>
-        </form>
+        </div>
     </mat-step>
-    <mat-step [stepControl]="fifthFormGroup" errorMessage="Documents are required.">
-        <form [formGroup]="fifthFormGroup">
+    <mat-step  errorMessage="Documents are required.">
+        <div formGroupName="fifthFormGroup">
             <ng-template matStepLabel>Documents</ng-template>
            
-            <mat-form-field>
-                <div>
-                  <mat-toolbar>
-                    <!-- Display files names -->
-                    <input matInput [(ngModel)]="fileAttr" readonly name="name" />
-                    <!-- Browse Button -->
-                    <button mat-flat-button color="primary">Browse File</button>
-                  </mat-toolbar>
-                  <!-- Fetch selected filed on change -->
-                  <input
-                    type="file"
-                    #fileInput
-                    id="uploadFile"
-                    (change)="uploadFileEvt($event)"
-                    name="uploadFile"
-                    multiple="multiple"
-                    accept="image/*"
-                  />
-                </div>
-              </mat-form-field>
-              <mat-form-field>
-                <div>
-                  <mat-toolbar>
-                    <!-- Display files names -->
-                    <input matInput [(ngModel)]="fileAttr" readonly name="name" />
-                    <!-- Browse Button -->
-                    <button mat-flat-button color="primary">Browse File</button>
-                  </mat-toolbar>
-                  <!-- Fetch selected filed on change -->
-                  <input
-                    type="file"
-                    #fileInput
-                    id="uploadFile"
-                    (change)="uploadFileEvt($event)"
-                    name="uploadFile"
-                    multiple="multiple"
-                    accept="image/*"
-                  />
-                </div>
-              </mat-form-field>
-              <mat-form-field>
-                <div>
-                  <mat-toolbar>
-                    <!-- Display files names -->
-                    <input matInput [(ngModel)]="fileAttr" readonly name="name" />
-                    <!-- Browse Button -->
-                    <button mat-flat-button color="primary">Browse File</button>
-                  </mat-toolbar>
-                  <!-- Fetch selected filed on change -->
-                  <input
-                    type="file"
-                    #fileInput
-                    id="uploadFile"
-                    (change)="uploadFileEvt($event)"
-                    name="uploadFile"
-                    multiple="multiple"
-                    accept="image/*"
-                  />
-                </div>
-              </mat-form-field>
-              <mat-form-field>
-                <div>
-                  <mat-toolbar>
-                    <!-- Display files names -->
-                    <input matInput [(ngModel)]="fileAttr" readonly name="name" />
-                    <!-- Browse Button -->
-                    <button mat-flat-button color="primary">Browse File</button>
-                  </mat-toolbar>
-                  <!-- Fetch selected filed on change -->
-                  <input
-                    type="file"
-                    #fileInput
-                    id="uploadFile"
-                    (change)="uploadFileEvt($event)"
-                    name="uploadFile"
-                    multiple="multiple"
-                    accept="image/*"
-                  />
-                </div>
-              </mat-form-field>
-              <mat-form-field>
-                <div>
-                  <mat-toolbar>
-                    <!-- Display files names -->
-                    <input matInput [(ngModel)]="fileAttr" readonly name="name" />
-                    <!-- Browse Button -->
-                    <button mat-flat-button color="primary">Browse File</button>
-                  </mat-toolbar>
-                  <!-- Fetch selected filed on change -->
-                  <input
-                    type="file"
-                    #fileInput
-                    id="uploadFile"
-                    (change)="uploadFileEvt($event)"
-                    name="uploadFile"
-                    multiple="multiple"
-                    accept="image/*"
-                  />
-                </div>
-              </mat-form-field>
-              <mat-form-field>
-                <div>
-                  <mat-toolbar>
-                    <!-- Display files names -->
-                    <input matInput [(ngModel)]="fileAttr" readonly name="name" />
-                    <!-- Browse Button -->
-                    <button mat-flat-button color="primary">Browse File</button>
-                  </mat-toolbar>
-                  <!-- Fetch selected filed on change -->
-                  <input
-                    type="file"
-                    #fileInput
-                    id="uploadFile"
-                    (change)="uploadFileEvt($event)"
-                    name="uploadFile"
-                    multiple="multiple"
-                    accept="image/*"
-                  />
-                </div>
-              </mat-form-field>
-              <mat-form-field>
-                <div>
-                  <mat-toolbar>
-                    <!-- Display files names -->
-                    <input matInput [(ngModel)]="fileAttr" readonly name="name" />
-                    <!-- Browse Button -->
-                    <button mat-flat-button color="primary">Browse File</button>
-                  </mat-toolbar>
-                  <!-- Fetch selected filed on change -->
-                  <input
-                    type="file"
-                    #fileInput
-                    id="uploadFile"
-                    (change)="uploadFileEvt($event)"
-                    name="uploadFile"
-                    multiple="multiple"
-                    accept="image/*"
-                  />
-                </div>
-              </mat-form-field>
-            
-          
+                                <pre></pre>
+                    <label for="file">Select Profile Image:-</label>
+                    <input type="file" id="prof" (change)="onSelectProfile($event)">
+                <pre></pre>
+                    <label for="ad">Select Aadhar Doc:-</label>
+                    <input type="file" id="ad" (change)="onSelectAadhar($event)">
+                <pre></pre>
+                    <label for="pann">Select Pan doc:-</label>
+                    <input type="file" id="pann" (change)="onSelectPan($event)">
+                    <pre></pre>
+
+                     <pre></pre>
+                    <label for="signe">Select Signature:-</label>
+                    <input type="file" id="signe" (change)="onSelectSign($event)">
+                    <pre></pre>
+
+                     <pre></pre>
+                    <label for="slip">Select Salary Slip:-</label>
+                    <input type="file" id="slip" (change)="onSelectSlip($event)">
+                    <pre></pre>
+                    <pre></pre>
+                    <label for="licence">Select Driving Licence-</label>
+                    <input type="file" id="licence" (change)="onSelectLic($event)">
+                    <pre></pre>
+
+                     <pre></pre>
+                    <label for="bank">Select Bank Statement-</label>
+                    <input type="file" id="bank" (change)="onSelectBank($event)">
+                    <pre></pre>
+
+                    <pre></pre>
+                    <label for="pan">Select CAR Quotation:-</label>
+                    <input type="file" id="pan" (change)="onSelectPan($event)">
+                    <pre></pre>
+                    <pre></pre>
+                    <label for="sign">Select FOrm-16</label>
+                    <input type="file" id="sign" (change)="onSelectPan($event)">
+                    <pre></pre>
+
+                     <pre></pre>
+                    <label for="pan">Select ITR-</label>
+                    <input type="file" id="pan" (change)="onSelectPan($event)">
+                    <pre></pre>
+                
 
             <div>
                 
                 <button mat-button matStepperPrevious color="primary">Back</button>
                 <button mat-button matStepperNext color="primary">Next</button>
             </div>
-        </form>
+        </div>
     </mat-step>
 
     <mat-step>
@@ -399,4 +287,7 @@
             <button mat-button matSubmit color="primary">Submit</button>
         </div>
     </mat-step>
-</mat-stepper></div>
+</form>
+</mat-stepper >
+
+</div>

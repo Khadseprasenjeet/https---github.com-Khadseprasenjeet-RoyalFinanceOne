@@ -6,6 +6,18 @@ import { Enquiry } from 'src/app/model/enquiry';
   providedIn: 'root'
 })
 export class CommonService {
+  createUser(formData: FormData) {
+   
+
+return this.http.post("",formData);
+
+
+
+
+  }
+  saveProfile(value: Partial<{ firstCtrl: string; }>) {
+    throw new Error('Method not implemented.');
+  }
 
   constructor(private http:HttpClient) { }
 
