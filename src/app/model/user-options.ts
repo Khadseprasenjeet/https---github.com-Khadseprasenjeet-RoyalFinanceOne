@@ -10,6 +10,7 @@ export class UserOptions {
                   {label:'EMI Calculator' , path:'emi_calc'}
                 ],
             oe:[
+              {label:'View All' , path:'view_all'},
               {label:'Check cibil' , path:'check_cibil'},
               {label:'Verify Documents' , path :'verify_doc'},
          

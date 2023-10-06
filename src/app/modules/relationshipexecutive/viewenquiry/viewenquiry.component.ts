@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonService } from '../../shared/common.service';
 import { Enquiry } from 'src/app/model/enquiry';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-viewenquiry',
@@ -8,7 +9,7 @@ import { Enquiry } from 'src/app/model/enquiry';
   styleUrls: ['./viewenquiry.component.css']
 })
 export class ViewenquiryComponent {
-  constructor(private common:CommonService){
+  constructor(private common:CommonService ,private route:Router){
 
   }
   enqq:Enquiry[];
@@ -22,6 +23,10 @@ export class ViewenquiryComponent {
       
       this.enqq=en;
     })
+  }
+  checkcibil(){
+
+
   }
 
 }

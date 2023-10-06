@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CheckcibilComponent } from './checkcibil/checkcibil.component';
 import { VerifydocumentComponent } from './verifydocument/verifydocument.component';
+import { ViewAllenquiryComponent } from './view-allenquiry/view-allenquiry.component';
 
 const routes: Routes = [
   {
@@ -9,6 +10,8 @@ const routes: Routes = [
   },
   {
     path:'verify_doc',component:VerifydocumentComponent
+  },{
+    path:'view_all',component:ViewAllenquiryComponent
   }
 ];
 

@@ -8,6 +8,10 @@ import { Enquiry } from 'src/app/model/enquiry';
 export class CommonService {
 
   constructor(private http:HttpClient) { }
+
+  cbl:number;
+
+
   enq:Enquiry={
     enquiryId: 0,
     customerName: undefined,

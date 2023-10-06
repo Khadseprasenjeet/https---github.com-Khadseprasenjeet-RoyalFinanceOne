@@ -8,7 +8,9 @@
         <th scope="col">Customer Alternate Mobile Number</th>
         <th scope="col">Customer EmailId</th>
         <th scope="col">Customer Date of Birth</th>
-        <th>CheckCibil</th>
+        <th scope="col">CheckCibil</th>
+        <th>Cibil Score</th>
+        <th>Statue</th>
       
     </tr>  
     
@@ -21,9 +23,12 @@
         <td>{{p.customerAlternateMobileNumber}}</td>
         <td>{{p.customerEmailId}}</td>
         <td>{{p.customerDateOfBirth}}</td>
-        <td><button routerLink="/application/oe/view_all">checkcibil</button></td>
+        <td><button (click)="checkcibil()">checkcibil</button></td>
+        <td>{{cibil}} </td>
+        <td><button>Reject</button>
+            <button>Accecpt</button></td>
         
       </tr>
       
   </table>
-  <router-outlet></router-outlet>
+
