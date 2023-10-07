@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <table class="table" border="2">
     <tr>
@@ -31,4 +32,68 @@
       </tr>
       
   </table>
+=======
+>>>>>>> 74ab8bb61e98765f6443a563f7a0d719af32c1a2
 
+<div class="container-fluid">
+    <div class=" text-center mt-5 ">
+     <h2> <b>View All Enquiry Data</b></h2>
+   </div>
+   
+ 
+ 
+   <div class="container">
+     
+       <table class="table table-striped" border="8 Solid Black">
+         <tbody >
+           <tr>
+           <th scope="col">ENQUIRY ID</th>
+           <th scope="col">CUSTOMER NAME</th>       
+           <th scope="col">PAN CARD NO. </th>
+           <th scope="col">Email </th>
+           <th scope="col">DATE OF BIRTH</th>
+           <th scope="col">MOBILE NO.</th>
+           <th scope="col">ENQUIRY STATUS</th>
+           <th scope="col">CIBIL SCORE</th>
+           <th scope="col">REMARK</th>
+           <th scope="col">CIBIL SCORE CHECK</th>
+           <th scope="col"></th>
+           <th scope="col"></th>
+           
+         </tr>
+           <tr *ngFor="let e of enquiry">
+              
+               <td>{{e.enquiryId}}</td>
+               <td>{{e.customerName}}</td>
+               <td>{{e.pancardNumber}}</td>
+               <td>{{e.customerEmailId}}</td>
+               <td>{{e.customerDateOfBirth}}</td>
+               <td>{{e.customerMobileNumber}}</td>
+               <td>{{ e.enquiryStatus }}</td>
+               <td>{{ e.cibilScore.cibilScore }}</td>
+               <td>{{ e.cibilScore.cibilRemark }}</td>
+               <td>
+                 <button
+                   *ngIf="e.cibilScore.cibilScore == 0"
+                   (click)="checkCIBIL(e.enquiryId, e)" 
+                   style="background-color: green; color: white"> Check</button>
+               </td>
+               <td>
+                 <button
+                   *ngIf="e.cibilScore.cibilScore !=0 && e.enquiryStatus === 'INPROCESS' &&   e.cibilScore.cibilScore >= 750  "
+                   (click)="approveEnquiry(e.enquiryId, e)"
+                   style="background-color: green; color: white" > Approve</button>
+               </td>
+               <td>
+                 <button
+                   *ngIf="e.cibilScore.cibilScore !=0 && e.enquiryStatus === 'INPROCESS' && e.cibilScore.cibilScore >0 && e.cibilScore.cibilScore < 750  "
+                   (click)="rejectEnquiry(e.enquiryId, e)"
+                   style="background-color: red; color: white" >Reject</button>
+               </td>
+ 
+             </tr>
+           </tbody>
+         </table>
+       </div>
+     </div>
+ 

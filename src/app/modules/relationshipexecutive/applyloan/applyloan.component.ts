@@ -92,63 +92,71 @@ export class ApplyloanComponent {
 
     })
   }
- 
-  SaveCustomer()
-    {
-        let userJson:string=JSON.stringify(this.applyreg.value);
-        const formData:FormData=new FormData();
-           formData.append("userJson",userJson);
-           formData.append("prof",this.profileImg);
-           formData.append("Aadhar",this.aadhar);
-           formData.append("pan",this.pan);
-           formData.append("sign",this.sign);
-           formData.append("slip",this.slip);
-           formData.append("lic",this.lic);
-           formData.append("bank",this.bank);
 
-       this.cs.createUser(formData).subscribe((data:any)=>
-       {
-        console.log(data)
-       }
-       )
-    }
+  SaveCustomer() {
+    let userJson: string = JSON.stringify(this.applyreg.value);
+    const formData: FormData = new FormData();
+    formData.append("userJson", userJson);
+    formData.append("prof", this.profileImg);
+    formData.append("Aadhar", this.aadhar);
+    formData.append("pan", this.pan);
+    formData.append("sign", this.sign);
+    formData.append("slip", this.slip);
+    formData.append("lic", this.lic);
+    formData.append("bank", this.bank);
+    formData.append("carQuo", this.carQuo);
+    formData.append("itr", this.itr);
+    formData.append("form16", this.form16);
 
-    profileImg:any;
-    aadhar:any;
-    pan:any;
-    sign:any;
-    slip:any;
-    lic:any;
-    bank:any;
-    onSelectProfile(value:any)
-    {
-      this.profileImg=value.target.files[0];
-      console.log(this.profileImg);
+    this.cs.createUser(formData).subscribe((data: any) => {
+      console.log(data)
     }
-    onSelectAadhar(value:any)
-    {
-      this.aadhar=value.target.files[0];
-    }
-    onSelectPan(value:any)
-    {
-      this.pan=value.target.files[0];
-    }
-    onSelectSign(value:any)
-    {
-      this.sign=value.target.files[0];
-    }
-     onSelectSlip(value:any)
-    {
-      this.slip=value.target.files[0];
-    }
-     onSelectLic(value:any)
-    {
-      this.lic=value.target.files[0];
-    }
-      onSelectBank(value:any)
-    {
-      this.bank=value.target.files[0];
-    }
+    )
+  }
+
+  profileImg: any;
+  aadhar: any;
+  pan: any;
+  sign: any;
+  slip: any;
+  lic: any;
+  bank: any;
+  carQuo: any;
+  itr: any;
+  form16: any;
+  onSelectProfile(value: any) {
+    this.profileImg = value.target.files[0];
+    console.log(this.profileImg);
+  }
+  onSelectAadhar(value: any) {
+    this.aadhar = value.target.files[0];
+  }
+  onSelectPan(value: any) {
+    this.pan = value.target.files[0];
+  }
+  onSelectSign(value: any) {
+    this.sign = value.target.files[0];
+  }
+  onSelectSlip(value: any) {
+    this.slip = value.target.files[0];
+  }
+  onSelectLic(value: any) {
+    this.lic = value.target.files[0];
+  }
+  onSelectBank(value: any) {
+    this.bank = value.target.files[0];
+  }
+
+  onSelectCarQuo(value: any) {
+    this.carQuo = value.target.files[0];
+  }
+  onSelectITR(value: any) {
+    this.itr = value.target.files[0];
+  }
+  onSelectForm16(value: any) {
+    this.form16 = value.target.files[0];
+  }
+
 
 
 

@@ -222,50 +222,52 @@
         <div formGroupName="fifthFormGroup">
             <ng-template matStepLabel>Documents</ng-template>
            
-                                <pre></pre>
-                    <label for="file">Select Profile Image:-</label>
-                    <input type="file" id="prof" (change)="onSelectProfile($event)">
-                <pre></pre>
-                    <label for="ad">Select Aadhar Doc:-</label>
-                    <input type="file" id="ad" (change)="onSelectAadhar($event)">
-                <pre></pre>
-                    <label for="pann">Select Pan doc:-</label>
-                    <input type="file" id="pann" (change)="onSelectPan($event)">
-                    <pre></pre>
-
-                     <pre></pre>
-                    <label for="signe">Select Signature:-</label>
-                    <input type="file" id="signe" (change)="onSelectSign($event)">
-                    <pre></pre>
-
-                     <pre></pre>
-                    <label for="slip">Select Salary Slip:-</label>
-                    <input type="file" id="slip" (change)="onSelectSlip($event)">
-                    <pre></pre>
-                    <pre></pre>
-                    <label for="licence">Select Driving Licence-</label>
-                    <input type="file" id="licence" (change)="onSelectLic($event)">
-                    <pre></pre>
-
-                     <pre></pre>
-                    <label for="bank">Select Bank Statement-</label>
-                    <input type="file" id="bank" (change)="onSelectBank($event)">
-                    <pre></pre>
-
-                    <pre></pre>
-                    <label for="pan">Select CAR Quotation:-</label>
-                    <input type="file" id="pan" (change)="onSelectPan($event)">
-                    <pre></pre>
-                    <pre></pre>
-                    <label for="sign">Select FOrm-16</label>
-                    <input type="file" id="sign" (change)="onSelectPan($event)">
-                    <pre></pre>
-
-                     <pre></pre>
-                    <label for="pan">Select ITR-</label>
-                    <input type="file" id="pan" (change)="onSelectPan($event)">
-                    <pre></pre>
-                
+            <table class="table" border="2">
+    
+                             
+                  <tr >
+                  <td> <label for="file">Select Profile Image:-</label></td>
+                    <td><input type="file" id="prof" (change)="onSelectProfile($event)"></td>
+                  </tr>
+                  <tr>
+                    <td> <label for="ad">Select Aadhar Doc:-</label></td>
+                    <td><input type="file" id="ad" (change)="onSelectAadhar($event)"></td>
+                  </tr>
+                    <tr>
+                    <td> <label for="pann">Select Pan doc:-</label></td>
+                    <td>  <input type="file" id="pann" (change)="onSelectPan($event)"></td>
+                  </tr>
+                    <tr>
+                    <td> <label for="signe">Select Signature:-</label></td>
+                    <td><input type="file" id="signe" (change)="onSelectSign($event)"></td>
+                  </tr>
+                    <tr>
+                    <td><label for="slip">Select Salary Slip:-</label></td>
+                    <td> <input type="file" id="slip" (change)="onSelectSlip($event)"></td>
+                  </tr>
+                    <tr>
+                    <td><label for="licence">Select Driving Licence-</label></td>
+                    <td> <input type="file" id="licence" (change)="onSelectLic($event)"></td>
+                  </tr>
+                  <tr>
+                    <td><label for="bank">Select Bank Statement-</label></td>
+                    <td><input type="file" id="bank" (change)="onSelectBank($event)"></td>
+                  </tr>
+                  <tr>
+                    <td> <label for="quo">Select CAR Quotation:-</label></td>
+                    <td> <input type="file" id="quo" (change)="onSelectCarQuo($event)"></td>
+                  </tr>
+                  <tr>
+                    <td> <label for="sign">Select FOrm-16</label></td>
+                    <td> <input type="file" id="sign" (change)="onSelectForm16($event)"></td>
+                  </tr>
+                   <tr>
+                    <td><label for="itr">Select ITR-</label></td>
+                    <td><input type="file" id="itr" (change)="onSelectITR($event)"></td>
+                  </tr>
+              </table>        
+            
+                      
 
             <div>
                 
