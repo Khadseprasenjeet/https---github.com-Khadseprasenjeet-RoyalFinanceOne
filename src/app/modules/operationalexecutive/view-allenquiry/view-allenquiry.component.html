@@ -1,5 +1,5 @@
+
 <table class="table" border="2">
-    
     <tr>
         <th scope="col">EnquiryId</th>
         <th scope="col">Customer Name</th>
@@ -16,15 +16,15 @@
     
       <tr *ngFor="let p of enqq">
         
-        <td>{{p.enquiryId}}</td>
+        <td>{{p.id}}</td>
         <td>{{p.customerName}}</td>
         <td>{{p.pancardNumber}}</td>
         <td>{{p.customerMobileNumber}}</td>
         <td>{{p.customerAlternateMobileNumber}}</td>
         <td>{{p.customerEmailId}}</td>
         <td>{{p.customerDateOfBirth}}</td>
-        <td><button (click)="checkcibil()">checkcibil</button></td>
-        <td>{{cibil}} </td>
+        <td><button (click)="checkcibil(p)" (click)="conform()">checkcibil</button></td>
+        <td>{{p.bankDatails.cibilScore}} </td>
         <td><button>Reject</button>
             <button>Accecpt</button></td>
         

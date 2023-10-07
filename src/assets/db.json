@@ -1,5 +1,68 @@
 {
-  "Enquiry": [
+  
+  
+"Customer": [{"id":1,
+"customerName":"abhishek",
+"pancardNumber":"DTQCC1258P",
+"customerMobileNumber":8975996879,
+"customerAlternateMobileNumber":8975996879,
+"customerEmailId":"nsbg@gamil.com",
+"customerDateOfBirth":"14/545/88",
+"bankDatails":{ "bankAccountNumber":1234,
+"bankName":"Sbi",
+"branchName":"cjc",
+"ifscCode":"lk766",
+"cardNumber":8779546621,
+"cibilScore": 0}},
+
+{"id":2,
+"customerName":"ashvini",
+"pancardNumber":"DTQCC1245P",
+"customerMobileNumber":8945996879,
+"customerAlternateMobileNumber":897595879,
+"customerEmailId":"nsbgs@gamil.com",
+"customerDateOfBirth":"14/45/88",
+
+"bankDatails":
+{ "bankAccountNumber":1235,
+"bankName":"Sbi",
+"branchName":"cjc",
+"ifscCode":"lk766",
+"cardNumber":8779546621,
+"cibilScore": 0}},
+
+{"id":3,
+"customerName":"prasanjit",
+"pancardNumber":"DTQCC1258P",
+"customerMobileNumber":8975996879,
+"customerAlternateMobileNumber":8975996879,
+"customerEmailId":"nsbg@gamil.com",
+"customerDateOfBirth":"14/545/88",
+"bankDatails":{ "bankAccountNumber":1235,
+"bankName":"Sbi",
+"branchName":"cjc",
+"ifscCode":"lk766",
+"cardNumber":8779546621,
+"cibilScore": 0}},
+
+{"id":4,
+"customerName":"himashu",
+"pancardNumber":"DTQCC1258P",
+"customerMobileNumber":8975996879,
+"customerAlternateMobileNumber":8975996879,
+"customerEmailId":"nsbg@gamil.com",
+"customerDateOfBirth":"14/545/88",
+"bankDatails":{ "bankAccountNumber":1236,
+"bankName":"Sbi",
+"branchName":"cjc",
+"ifscCode":"lk766",
+"cardNumber":8779546621,
+"cibilScore": 0}}],
+  
+
+
+
+"Enquiry": [
     {
       "id": 1,
       "customerName": "Abhishek",
