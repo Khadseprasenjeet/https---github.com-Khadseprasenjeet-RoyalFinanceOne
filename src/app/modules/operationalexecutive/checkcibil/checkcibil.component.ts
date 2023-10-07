@@ -52,7 +52,7 @@ export class CheckcibilComponent {
     cibil: number;
   
     generateCibil(): void {
-      console.log(this.common.cus.bankDatails.cibilScore)
+      //console.log(this.common.cus.bankDatails.cibilScore)
   
       // Validate PAN number
       if (!this.isValidPan(this.emiForm.value.panNumber)) {
@@ -69,9 +69,9 @@ export class CheckcibilComponent {
       this.cibil = Math.floor(Math.random() * (900 - 500 + 1)) + 300;
 
 
-      this.common.cus.bankDatails.cibilScore=this.cibil
+     // this.common.cus.bankDatails.cibilScore=this.cibil
 
-      this.common.saveEnquiryData2(this.common.cus)
+      //this.common.saveEnquiryData2(this.common.cus)
     }
   
     isValidPan(pan: string): boolean 
