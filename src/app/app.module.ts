@@ -17,6 +17,7 @@ import { HomeHeaderComponent } from './templates/home-header/home-header.compone
 import { LocateComponent } from './includes/locate/locate.component';
 import { MaterialModule } from './material/material.module';
 import { FormsModule } from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -40,7 +41,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
+    FormsModule,MatDialogModule
    
 
 

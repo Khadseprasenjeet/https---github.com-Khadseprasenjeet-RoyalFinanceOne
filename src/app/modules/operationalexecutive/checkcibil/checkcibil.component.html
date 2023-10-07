@@ -5,7 +5,7 @@
       <div class="top">
           
           <div id="xBut">
-              <button type="button"  id="Xbut" data-bs-dismiss="modal" style="margin-left: 250px;" (click)="Closedmodel()">X</button>
+              <button type="button"  id="Xbut" data-bs-dismiss="modal" style="margin-left: 250px;" (click)="close()">X</button>
          
           </div>
           
@@ -14,7 +14,7 @@
           <form [formGroup]="emiForm" >
               <div class="group">
                   <div class="title" style="color: #aa141d;">Pan Number</div>
-                  <input id="inputBox" type="text" placeholder="ex: XXXX0000X" class="loan-amount" formControlName="panNumber"/>
+                  <input id="inputBox" type="text" placeholder="ex: XXXXx0000X"  class="loan-amount"  formControlName="panNumber"/>
               </div>
 
               <div class="group">
@@ -49,4 +49,4 @@
  
 
 
-<router-outlet></router-outlet> 
+

@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+
+<table class="table" border="2">
+    <tr>
+        <th scope="col">EnquiryId</th>
+        <th scope="col">Customer Name</th>
+        <th scope="col">Pan Card Number</th>
+        <th scope="col">Customer Mobile Number</th>
+        <th scope="col">Customer Alternate Mobile Number</th>
+        <th scope="col">Customer EmailId</th>
+        <th scope="col">Customer Date of Birth</th>
+        <th scope="col">CheckCibil</th>
+        <th>Cibil Score</th>
+        <th>Statue</th>
+      
+    </tr>  
+    
+      <tr *ngFor="let p of enqq">
+        
+        <td>{{p.id}}</td>
+        <td>{{p.customerName}}</td>
+        <td>{{p.pancardNumber}}</td>
+        <td>{{p.customerMobileNumber}}</td>
+        <td>{{p.customerAlternateMobileNumber}}</td>
+        <td>{{p.customerEmailId}}</td>
+        <td>{{p.customerDateOfBirth}}</td>
+        <td><button (click)="checkcibil(p)" (click)="conform()">checkcibil</button></td>
+        <td>{{p.bankDatails.cibilScore}} </td>
+        <td><button>Reject</button>
+            <button>Accecpt</button></td>
+        
+      </tr>
+      
+  </table>
+=======
+>>>>>>> 74ab8bb61e98765f6443a563f7a0d719af32c1a2
 
 <div class="container-fluid">
     <div class=" text-center mt-5 ">

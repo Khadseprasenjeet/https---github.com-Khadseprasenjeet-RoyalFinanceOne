@@ -1,7 +1,9 @@
 import { CIBILScore } from "./cibilscore";
 
 export class Enquiry {
-    enquiryId:number;
+    
+  
+      enquiryId:number;
       
       customerName:String;
       pancardNumber:number;

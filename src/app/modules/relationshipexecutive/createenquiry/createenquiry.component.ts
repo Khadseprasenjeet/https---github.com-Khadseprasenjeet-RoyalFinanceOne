@@ -15,13 +15,7 @@ export class CreateenquiryComponent {
   ngOnInit(): void {
 
     this.enquiryForm=this.fb.group({
-      
-
-
-
-
-
-     
+    
       // id:[],
       customerName:['Daniel',[Validators.required]],
       pancardNumber:['GKZPK9636P'],
