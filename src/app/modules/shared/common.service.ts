@@ -62,7 +62,7 @@ saveEnquiryData2(cs:customerclass){
   // alert("save data//"+cs.bankDatails.cibilScore+"   "+cs.id)
   // console.log(cs.bankDatails.cibilScore)
 
-  return this.http.put("http://localhost:3000/Customer/"+cs.id,cs);
+  return this.http.put("http://localhost:3000/Customer"+cs.id,cs);
 
 
 }
