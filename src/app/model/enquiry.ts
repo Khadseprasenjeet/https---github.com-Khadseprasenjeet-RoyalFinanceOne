@@ -1,3 +1,5 @@
+import { CIBILScore } from "./cibilscore";
+
 export class Enquiry {
     enquiryId:number;
       
@@ -7,5 +9,7 @@ export class Enquiry {
       customerAlternateMobileNumber:number;
       customerEmailId:String;
       customerDateOfBirth:number;
+      enquiryStatus:string;
+      cibilScore:CIBILScore;
      
 }

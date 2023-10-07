@@ -1,11 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { CIBILScore } from 'src/app/model/cibilscore';
 import { Enquiry } from 'src/app/model/enquiry';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CommonService {
+
+  url:String="http://abhishek:9091";
   createUser(formData: FormData) {
    
    
@@ -31,14 +34,32 @@ return this.http.post("",formData);
     customerMobileNumber: 0,
     customerAlternateMobileNumber: 0,
     customerEmailId: undefined,
-    customerDateOfBirth: 0
+    customerDateOfBirth: 0,
+    enquiryStatus: '',
+    cibilScore: new CIBILScore
   }
   saveEnquiryData(en:Enquiry){
 
-    return this.http.post("http://localhost:3000/Enquiry",en);
+    return this.http.post(this.url+"/postEnquiry",en);
 
   }
   getEnquiry(){
-    return this.http.get("http://localhost:3000/Enquiry");
+    return this.http.get(this.url+"/get_Enquiry");
+  }
+
+  getEnquiryDetails(enquiryId: number, enquiryObject: Enquiry) {
+    return this.http
+      .put(this.url + "/getCibilScore/" + enquiryId, enquiryObject)
+      .subscribe();
+  }
+  approveEnquiry(enquiryId: number, enquiryObject: Enquiry){
+    return this.http
+      .put(this.url + "/approveEnquiry/" + enquiryId, enquiryObject)
+      .subscribe();
+  }
+  rejectEnquiry(enquiryId: number, enquiryObject: Enquiry){
+    return this.http
+      .put(this.url + "/rejectEnquiry/" + enquiryId, enquiryObject)
+      .subscribe();
   }
 }

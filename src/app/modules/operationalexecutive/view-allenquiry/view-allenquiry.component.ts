@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Enquiry } from 'src/app/model/enquiry';
 import { CommonService } from '../../shared/common.service';
+import { FormBuilder } from '@angular/forms';
+import { CIBILScore } from 'src/app/model/cibilscore';
 
 @Component({
   selector: 'app-view-allenquiry',
@@ -9,30 +11,50 @@ import { CommonService } from '../../shared/common.service';
   styleUrls: ['./view-allenquiry.component.css']
 })
 export class ViewAllenquiryComponent {
-  constructor(private common:CommonService ,private route:Router){
+  constructor(private common:CommonService,private fb:FormBuilder) { }
+  // cibilData:FormGroup;
+  enquiry:Enquiry[];
 
-  }
-  enqq:Enquiry[];
-  cibil:number;
+   cibil:CIBILScore[];
 
-  getenquiry(){
+  enquirydata:Enquiry;
 
-   
-  }
-  
-  ngOnInit(){
-    this.common.getEnquiry().subscribe((en:Enquiry[])=>{
-      
-
-      
-      this.enqq=en;
+  ngOnInit(): void {
+    this.common.getEnquiry().subscribe((data:Enquiry[])=>{
+      this.enquiry=data;
+       // console.log(this.enquiry.cibil.cibilId);
     })
-    this.cibil=this.common.cbl;
+
+    
+
+    //   this.cibilData=this.fb.group({
+    //     cibilId:[],
+    //     cibilScore:[],
+    //     cibilRemark:['APPROVE']
+    // })
   }
-  checkcibil(){
 
-    this.route.navigateByUrl("/check_cibil");
+  // checkCIBIL(enquiryId : number)
+  // {
+  //   //  this.common.getcibildata();
+  //   //  this.common.getcibildata(enquiryId).subscribe(data=>{this.enquirydata=data});
+    
+  //    console.log(enquiryId);
+  // }
 
+  checkCIBIL(enquiryId: number, enquiryObject: Enquiry) {
+    this.common.getEnquiryDetails(enquiryId, enquiryObject);
+    window.location.reload();
+  }
+
+  approveEnquiry(enquiryId: number, enquiryObject: Enquiry){
+    this.common.approveEnquiry(enquiryId, enquiryObject);
+    window.location.reload();
+  }
+
+  rejectEnquiry(enquiryId: number, enquiryObject: Enquiry){
+    this.common.rejectEnquiry(enquiryId, enquiryObject);
+    window.location.reload();
   }
 
 
