@@ -4,6 +4,10 @@ import { Enquiry } from 'src/app/model/enquiry';
 import { CommonService } from '../../shared/common.service';
 import { FormBuilder } from '@angular/forms';
 import { CIBILScore } from 'src/app/model/cibilscore';
+import { customerclass } from 'src/app/class/customerclass';
+import { OeService } from 'src/app/services/oe.service';
+import { MatDialog } from '@angular/material/dialog';
+import { CheckcibilComponent } from '../checkcibil/checkcibil.component';
 
 
 @Component({
@@ -13,53 +17,36 @@ import { CIBILScore } from 'src/app/model/cibilscore';
 })
 export class ViewAllenquiryComponent {
 
-  constructor(private common:CommonService,private fb:FormBuilder) { }
-  // cibilData:FormGroup;
-  enquiry:Enquiry[];
-
-   cibil:CIBILScore[];
+  constructor(private common:CommonService,private fb:FormBuilder , private oe:OeService,private dialog:MatDialog) { }
 
 
-  enquirydata:Enquiry;
+  eqruiry:customerclass[];
 
   ngOnInit(): void {
-    this.common.getEnquiry().subscribe((data:Enquiry[])=>{
-      this.enquiry=data;
-       // console.log(this.enquiry.cibil.cibilId);
-    })
+    this.oe.getEnqury().subscribe((data:customerclass[])=>{
+      this.eqruiry=data;
+    })}
 
-    
+  
+  checkcibil( c:customerclass){
+alert(this.oe.c.bankDatail.cibilScore)
+    this.oe.c = Object.assign({},c)
 
-    //   this.cibilData=this.fb.group({
-    //     cibilId:[],
-    //     cibilScore:[],
-    //     cibilRemark:['APPROVE']
-    // })
+    this.dialog.open(CheckcibilComponent)
   }
+accpet(c:customerclass){
+  this.oe.c = Object.assign({},c)
+  this.oe.c.bankDatail.cibilStatus="Pass by OE"
+  this.oe.updatEnquiry(this.oe.c).subscribe();
+}
 
-  // checkCIBIL(enquiryId : number)
-  // {
-  //   //  this.common.getcibildata();
-  //   //  this.common.getcibildata(enquiryId).subscribe(data=>{this.enquirydata=data});
-    
-  //    console.log(enquiryId);
-  // }
+rejectd(c:customerclass){
+  this.oe.c = Object.assign({},c)
+  this.oe.c.bankDatail.cibilStatus="Reject by OE"
+  this.oe.updatEnquiry(this.oe.c).subscribe();
+}
 
-  checkCIBIL(enquiryId: number, enquiryObject: Enquiry) {
-    this.common.getEnquiryDetails(enquiryId, enquiryObject);
-    window.location.reload();
-  }
 
-  approveEnquiry(enquiryId: number, enquiryObject: Enquiry){
-    this.common.approveEnquiry(enquiryId, enquiryObject);
-    window.location.reload();
-  }
-
-  rejectEnquiry(enquiryId: number, enquiryObject: Enquiry){
-    this.common.rejectEnquiry(enquiryId, enquiryObject);
-    window.location.reload();
-
-  }
-
+reject(){}
 
 }

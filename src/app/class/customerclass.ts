@@ -8,7 +8,7 @@ export class customerclass {
     customerAlternateMobileNumber:number;
     customerEmailId:string;
     customerDateOfBirth:String;
-    bankDatails:Bankdetails;
+    bankDatail:Bankdetails;
 
 
 }
