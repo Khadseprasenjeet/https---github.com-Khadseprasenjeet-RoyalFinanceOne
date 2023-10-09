@@ -1,295 +1,261 @@
-<div style=" transform:scale(.8)"> 
-    <mat-stepper [linear]="isLinear" #stepper >
-        <form [formGroup]="applyreg" (ngSubmit)="SaveCustomer()">
-    <mat-step  errorMessage="Name is required." >
-        <div formGroupName="firstFormGroup" >
-            <ng-template matStepLabel>Personal Details</ng-template>
-            <mat-form-field>
-                <mat-label>First Name</mat-label>
-                <input matInput placeholder="First name" formControlName="firstName" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label> Middle Name</mat-label>
-                <input matInput placeholder="Middle name" formControlName="middleName" required>
-            </mat-form-field>
+<div style=" transform:scale(.8)">
+    <form [formGroup]="applyreg">
 
-            <mat-form-field>
-                <mat-label> Last Name</mat-label>
-                <input matInput placeholder="Last name" formControlName="lastName" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label> Mother Name</mat-label>
-                <input matInput placeholder="Mother  name" formControlName="motherName" required>
-            </mat-form-field>
-           
-            <mat-form-field>
-                <mat-label> Date Of Birth</mat-label>
-                <input matInput placeholder="Date of Birth" formControlName="dob" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Select Gender</mat-label>
-                <mat-select [(value)]="selected">
-                    <mat-option>None</mat-option>
-                    <mat-option value="option1">Male</mat-option>
-                    <mat-option value="option2">Female</mat-option>
-                    <mat-option value="option3">Other</mat-option>
-                </mat-select>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Mobile Number</mat-label>
-                <input matInput placeholder="Mobile Number" formControlName="mobileNumber" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Email</mat-label>
-                <input matInput placeholder="Email" formControlName="email" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Aadhar Card </mat-label>
-                <input matInput placeholder="Aadhar" formControlName="adharNumber" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>PAN Card </mat-label>
-                <input matInput placeholder="PAN" formControlName="pan" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Select an option</mat-label>
-                <mat-select [(value)]="selected">
-                    <mat-option>None</mat-option>
-                    <mat-option value="option1">Married</mat-option>
-                    <mat-option value="option2">Unmarried</mat-option>
-                    <mat-option value="option3">Divorsed</mat-option>
-                </mat-select>
-            </mat-form-field>
-            <div>
-                <p>Go to a different step to see the error state</p>
-                <button mat-button matStepperNext color="primary"  >Next</button>
-            </div>
-        </div>
-    </mat-step>
-    <mat-step  errorMessage="Address is required.">
-        <div formGroupName="secondFormGroup">
-            <ng-template matStepLabel>Permenenet Address</ng-template>
-            <mat-form-field>
-                <mat-label>House Number</mat-label>
-                <input matInput placeholder="Ex. 1 Main St, New York, NY" formControlName="houseNumber" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Landmark</mat-label>
-                <input matInput placeholder="Ex. near RTO Office" formControlName="landmark" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Street Name</mat-label>
-                <input matInput placeholder="karve road" formControlName="streetName" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>City Name</mat-label>
-                <input matInput placeholder="Pune" formControlName="cityName" required>
-            </mat-form-field>
+        <mat-stepper [linear]="isLinear" #stepper>
 
-            <mat-form-field>
-                <mat-label>Taluka Name</mat-label>
-                <input matInput placeholder="Haveli" formControlName="taluka" required>
-            </mat-form-field>
+            <mat-step [stepControl]="firstform">
+                <div formGroupName="firstFormGroup">
+                    <ng-template matStepLabel>Personal Details</ng-template>
+                    <mat-form-field>
+                        <mat-label>First Name</mat-label>
+                        <input matInput placeholder="First name" formControlName="firstName" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label> Middle Name</mat-label>
+                        <input matInput placeholder="Middle name" formControlName="middleName" required>
+                    </mat-form-field>
 
-            <mat-form-field>
-                <mat-label>District</mat-label>
-                <input matInput placeholder="Pune" formControlName="district" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>State</mat-label>
-                <input matInput placeholder="Maharashtra" formControlName="state" required>
-            </mat-form-field>
-
-            <mat-form-field>
-                <mat-label>Country</mat-label>
-                <input matInput placeholder="India" formControlName="country" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Pincode</mat-label>
-                <input matInput placeholder="411052" formControlName="pincode" required>
-            </mat-form-field>
-
-            <div>
-                <p>Go to a different step to see the error state</p>
-                <button mat-button matStepperPrevious color="primary">Back</button>
-                <button mat-button matStepperNext color="primary">Next</button>
-            </div>
-        </div>
-    </mat-step>
-    <mat-step  errorMessage="Address is required.">
-        <div formGroupName="thirdFormGroup">
-            <ng-template matStepLabel>Local Address</ng-template>
-           
-            <mat-form-field>
-                <mat-label>House Number</mat-label>
-                <input matInput placeholder="Ex. 1 Main St, New York, NY" formControlName="houseNumber" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Landmark</mat-label>
-                <input matInput placeholder="Ex. near RTO Office" formControlName="landmark" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Street Name</mat-label>
-                <input matInput placeholder="karve road" formControlName="streetName" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>City Name</mat-label>
-                <input matInput placeholder="Pune" formControlName="cityName" required>
-            </mat-form-field>
-
-            <mat-form-field>
-                <mat-label>Taluka Name</mat-label>
-                <input matInput placeholder="Haveli" formControlName="taluka" required>
-            </mat-form-field>
-
-            <mat-form-field>
-                <mat-label>District</mat-label>
-                <input matInput placeholder="Pune" formControlName="district" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>State</mat-label>
-                <input matInput placeholder="Maharashtra" formControlName="state" required>
-            </mat-form-field>
-
-            <mat-form-field>
-                <mat-label>Country</mat-label>
-                <input matInput placeholder="India" formControlName="country" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Pincode</mat-label>
-                <input matInput placeholder="411052" formControlName="pincode" required>
-            </mat-form-field>
-
-            <div>
-                
-                <p>Go to a different step to see the error state</p>
-                <button mat-button matStepperPrevious  color="primary">Back</button>
-                <button mat-button matStepperNext color="primary">Next</button>
-            </div>
-        </div>
-    </mat-step>
-    <mat-step  errorMessage="Bank Details are required.">
-        <div formGroupName="fourthFormGroup">
-            <ng-template matStepLabel>Bank Details</ng-template>
-           
-           
-            <mat-form-field>
-                <mat-label>Account Holder Name</mat-label>
-                <input matInput placeholder="Mr XYZ" formControlName="accountHolderName" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Bank ACCount Numberr</mat-label>
-                <input matInput placeholder="Ex. near RTO Office" formControlName="bankAccountNumber" required>
-            </mat-form-field>
+                    <mat-form-field>
+                        <mat-label> Last Name</mat-label>
+                        <input matInput placeholder="Last name" formControlName="lastName" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label> Mother Name</mat-label>
+                        <input matInput placeholder="Mother  name" formControlName="motherName" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label> Date Of Birth</mat-label>
+                        <input matInput placeholder="18/03/1996" formControlName="dob" required>
+                    </mat-form-field>
+                 
+                    <!-- <mat-form-field>
+                        <mat-label>Select Gender</mat-label>
+                        <mat-select [(value)]="selected">
+                            <mat-option>None</mat-option>
+                            <mat-option value="option1">Male</mat-option>
+                            <mat-option value="option2">Female</mat-option>
+                            <mat-option value="option3">Other</mat-option>
+                        </mat-select>
+                    </mat-form-field> -->
+                    <mat-form-field>
+                        <mat-label>Mobile Number</mat-label>
+                        <input matInput placeholder="Mobile Number" formControlName="mobileNumber" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Email" formControlName="email" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Aadhar Card </mat-label>
+                        <input matInput placeholder="Aadhar" formControlName="adharNumber" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>PAN Card </mat-label>
+                        <input matInput placeholder="PAN" formControlName="pan" required>
+                    </mat-form-field>
+                            
+                        
 
 
-            <mat-form-field>
-                <mat-label>Bank Name</mat-label>
-                <input matInput placeholder="karve road" formControlName="bankName" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>IFSC Code</mat-label>
-                <input matInput placeholder="BKID0009660" formControlName="IFSCCode" required>
-            </mat-form-field>
-
-            <mat-form-field>
-                <mat-label>Branch Name</mat-label>
-                <input matInput placeholder="karvenagar" formControlName="branchName" required>
-            </mat-form-field>
-
-            <mat-form-field>
-                <mat-label>Select an Account Type</mat-label>
-                <mat-select [(value)]="selected">
-                    <mat-option value="option1">Saving</mat-option>
-                    <mat-option value="option2">Current</mat-option>
-                </mat-select>
-            </mat-form-field>
-
-            <mat-form-field>
-                <mat-label>Country</mat-label>
-                <input matInput placeholder="India" formControlName="country" required>
-            </mat-form-field>
-          
-
-            <div>
-                <p>Go to a different step to see the error state</p>
-                <button mat-button matStepperPrevious color="primary">Back</button>
-                <button mat-button matStepperNext color="primary">Next</button>
-            </div>
-        </div>
-    </mat-step>
-    <mat-step  errorMessage="Documents are required.">
-        <div formGroupName="fifthFormGroup">
-            <ng-template matStepLabel>Documents</ng-template>
-           
-            <table class="table" border="2">
-    
-                             
-                  <tr >
-                  <td> <label for="file">Select Profile Image:-</label></td>
-                    <td><input type="file" id="prof" (change)="onSelectProfile($event)"></td>
-                  </tr>
-                  <tr>
-                    <td> <label for="ad">Select Aadhar Doc:-</label></td>
-                    <td><input type="file" id="ad" (change)="onSelectAadhar($event)"></td>
-                  </tr>
-                    <tr>
-                    <td> <label for="pann">Select Pan doc:-</label></td>
-                    <td>  <input type="file" id="pann" (change)="onSelectPan($event)"></td>
-                  </tr>
-                    <tr>
-                    <td> <label for="signe">Select Signature:-</label></td>
-                    <td><input type="file" id="signe" (change)="onSelectSign($event)"></td>
-                  </tr>
-                    <tr>
-                    <td><label for="slip">Select Salary Slip:-</label></td>
-                    <td> <input type="file" id="slip" (change)="onSelectSlip($event)"></td>
-                  </tr>
-                    <tr>
-                    <td><label for="licence">Select Driving Licence-</label></td>
-                    <td> <input type="file" id="licence" (change)="onSelectLic($event)"></td>
-                  </tr>
-                  <tr>
-                    <td><label for="bank">Select Bank Statement-</label></td>
-                    <td><input type="file" id="bank" (change)="onSelectBank($event)"></td>
-                  </tr>
-                  <tr>
-                    <td> <label for="quo">Select CAR Quotation:-</label></td>
-                    <td> <input type="file" id="quo" (change)="onSelectCarQuo($event)"></td>
-                  </tr>
-                  <tr>
-                    <td> <label for="sign">Select FOrm-16</label></td>
-                    <td> <input type="file" id="sign" (change)="onSelectForm16($event)"></td>
-                  </tr>
-                   <tr>
-                    <td><label for="itr">Select ITR-</label></td>
-                    <td><input type="file" id="itr" (change)="onSelectITR($event)"></td>
-                  </tr>
-              </table>        
-            
-                      
-
-            <div>
-                
-                <button mat-button matStepperPrevious color="primary">Back</button>
-                <button mat-button matStepperNext color="primary">Next</button>
-            </div>
-        </div>
-    </mat-step>
-
-    <mat-step>
-        <ng-template matStepLabel>Done</ng-template>
-        <p>Submit  Your Form </p>
-        <div>
-            <button mat-button matStepperPrevious color="primary">Back</button>
-            
-            <button mat-button (click)="stepper.reset()">Reset</button>
 
 
-            <button mat-button matSubmit color="primary">Submit</button>
-        </div>
-    </mat-step>
-</form>
-</mat-stepper >
 
+                        
+                    <div>
+                        <p>Go to a different step to see the error state</p>
+                        <button mat-raised button matStepperNext color="primary">Next</button>
+                    </div>
+                </div>
+            </mat-step>
+            <mat-step [stepControl]="secondform" errorMessage="Address is required.">
+                <div formGroupName="secondFormGroup">
+                    <ng-template matStepLabel>Permenenet Address</ng-template>
+
+                    <mat-form-field>
+                        <mat-label>Landmark</mat-label>
+                        <input matInput placeholder="Ex. near RTO Office" formControlName="landMark" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Street Name</mat-label>
+                        <input matInput placeholder="karve road" formControlName="areaName" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>City Name</mat-label>
+                        <input matInput placeholder="Pune" formControlName="cityName" required>
+                    </mat-form-field>
+
+
+
+                    <mat-form-field>
+                        <mat-label>District</mat-label>
+                        <input matInput placeholder="Pune" formControlName="districtName" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>State</mat-label>
+                        <input matInput placeholder="Maharashtra" formControlName="stateName" required>
+                    </mat-form-field>
+
+
+                    <mat-form-field>
+                        <mat-label>Pincode</mat-label>
+                        <input matInput placeholder="411052" formControlName="pinCodeNumber" required>
+                    </mat-form-field>
+
+                    <div>
+                        <p>Go to a different step to see the error state</p>
+                        <button mat-raised button matStepperPrevious color="primary">Back</button>
+                        <button mat-raised button matStepperNext color="primary">Next</button>
+                    </div>
+                </div>
+            </mat-step>
+            <mat-step [stepControl]="thirdform" errorMessage="Address is required.">
+                <div formGroupName="thirdFormGroup">
+                    <ng-template matStepLabel>Local Address</ng-template>
+
+
+                    <mat-form-field>
+                        <mat-label>Landmark</mat-label>
+                        <input matInput placeholder="Ex. near RTO Office" formControlName="landMark" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Street Name</mat-label>
+                        <input matInput placeholder="karve road" formControlName="areaName" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>City Name</mat-label>
+                        <input matInput placeholder="Pune" formControlName="cityName" required>
+                    </mat-form-field>
+
+
+
+                    <mat-form-field>
+                        <mat-label>District</mat-label>
+                        <input matInput placeholder="Pune" formControlName="districtName" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>State</mat-label>
+                        <input matInput placeholder="Maharashtra" formControlName="stateName" required>
+                    </mat-form-field>
+
+                     <mat-form-field>
+                        <mat-label>Pincode</mat-label>
+                        <input matInput placeholder="411052" formControlName="pinCodeNumber" required>
+                    </mat-form-field>
+
+                    <div>
+
+                        <p>Go to a different step to see the error state</p>
+                        <button mat-button matStepperPrevious color="primary">Back</button>
+                        <button mat-button matStepperNext color="primary">Next</button>
+                    </div>
+                </div>
+            </mat-step>
+            <mat-step [stepControl]="fourthform" errorMessage="Bank Details are required.">
+                <div formGroupName="fourthFormGroup">
+                    <ng-template matStepLabel>Bank Details</ng-template>
+
+
+                  
+                    <mat-form-field>
+                        <mat-label>Bank Name</mat-label>
+                        <input matInput placeholder="karve road" formControlName="bankName" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>IFSC Code</mat-label>
+                        <input matInput placeholder="BKID0009660" formControlName="ifscNumber" required>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Branch Name</mat-label>
+                        <input matInput placeholder="karvenagar" formControlName="branchName" required>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Branch Name</mat-label>
+                        <input matInput placeholder="1852-1582-9563" formControlName="cardNumber" required>
+                    </mat-form-field>
+
+               
+
+                   
+
+
+                    <div>
+                        <p>Go to a different step to see the error state</p>
+                        <button mat-raised button matStepperPrevious color="primary">Back</button>
+                        <button mat-raised button matStepperNext color="primary">Next</button>
+                    </div>
+                </div>
+            </mat-step>
+            <mat-step [stepControl]="fifthform" errorMessage="Documents are required.">
+                <div formGroupName="fifthFormGroup">
+                    <ng-template matStepLabel>Documents</ng-template>
+
+                    <table class="table" border="2">
+
+
+                        <tr>
+                            <td> <label for="file">Select Profile Image:-</label></td>
+                            <td><input type="file" id="prof" (change)="onSelectProfile($event)"></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="ad">Select Aadhar Doc:-</label></td>
+                            <td><input type="file" id="ad" (change)="onSelectAadhar($event)"></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="pann">Select Pan doc:-</label></td>
+                            <td> <input type="file" id="pann" (change)="onSelectPan($event)"></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="signe">Select Signature:-</label></td>
+                            <td><input type="file" id="signe" (change)="onSelectSign($event)"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="slip">Select Salary Slip:-</label></td>
+                            <td> <input type="file" id="slip" (change)="onSelectSlip($event)"></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="bank">Select Bank Statement-</label></td>
+                            <td><input type="file" id="bank" (change)="onSelectBank($event)"></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="quo">Select CAR Quotation:-</label></td>
+                            <td> <input type="file" id="quo" (change)="onSelectCarQuo($event)"></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="sign">Select FOrm-16</label></td>
+                            <td> <input type="file" id="sign" (change)="onSelectForm16($event)"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="itr">Select ITR-</label></td>
+                            <td><input type="file" id="itr" (change)="onSelectITR($event)"></td>
+                        </tr>
+                    </table>
+
+
+
+                    <div>
+
+                        <button mat-raised button matStepperPrevious color="primary">Back</button>
+                        <button mat-raised button matStepperNext color="primary">Next</button>
+                    </div>
+                </div>
+            </mat-step>
+
+            <mat-step>
+                <ng-template matStepLabel>Done</ng-template>
+                <p>Submit Your Form </p>
+                <div>
+                    <button mat-raised button matStepperPrevious color="primary">Back</button>
+
+                    <button mat-raised button (click)="stepper.reset()">Reset</button>
+
+
+                    <button type="submit" color="accent" (click)="SaveCustomer()">Submit</button>
+                </div>
+            </mat-step>
+
+        </mat-stepper>
+    </form>
 </div>

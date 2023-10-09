@@ -7,12 +7,15 @@ import { Enquiry } from 'src/app/model/enquiry';
   providedIn: 'root'
 })
 export class CommonService {
+  file(file: any) {
+    throw new Error('Method not implemented.');
+  }
 
   url:String="http://abhishek:9091";
   createUser(formData: FormData) {
    
    
-return this.http.post("",formData);
+return this.http.post("http://localhost:9091/customer/save_customer",formData);
 
 
 

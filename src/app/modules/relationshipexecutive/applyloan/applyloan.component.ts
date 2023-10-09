@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { FormBuilder, Validators, FormsModule, ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
+import { FormBuilder, Validators, FormsModule, ReactiveFormsModule, FormGroup, FormControl, FormGroupName } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
@@ -8,7 +8,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { CommonService } from '../../shared/common.service';
-
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @Component({
   selector: 'app-applyloan',
@@ -26,6 +26,7 @@ import { CommonService } from '../../shared/common.service';
     MatSelectModule,
     MatCheckboxModule,
     MatToolbarModule,
+    MatDatepickerModule,
   ],
 
 })
@@ -35,6 +36,12 @@ export class ApplyloanComponent {
   selected = 'option2';
   constructor(private fb: FormBuilder, public cs: CommonService) { }
   applyreg: FormGroup;
+
+  // firstFormGroup:FormGroupName;
+  // secondFormGroup:FormGroupName;
+  // thirdFormGroup :FormGroupName ;
+  // fourthFormGroup  :FormGroupName ;
+
 
   ngOnInit() {
     this.applyreg = this.fb.group({
@@ -55,61 +62,82 @@ export class ApplyloanComponent {
       }),
       secondFormGroup: this.fb.group({
 
-        houseNumber: ['', Validators.required],
-        landmark: ['', Validators.required],
-        streetName: ['', Validators.required],
+
+        landMark: ['', Validators.required],
+        areaName: ['', Validators.required],
         cityName: ['', Validators.required],
-        taluka: ['', Validators.required],
-        district: ['', Validators.required],
-        state: ['', Validators.required],
-        country: ['', Validators.required],
-        pincode: ['', Validators.required],
+        districtName: ['', Validators.required],
+        stateName: ['', Validators.required],
+        pinCodeNumber: ['', Validators.required],
       }),
       thirdFormGroup: this.fb.group({
-        houseNumber: ['', Validators.required],
-        landmark: ['', Validators.required],
-        streetName: ['', Validators.required],
+        landMark: ['', Validators.required],
+        areaName: ['', Validators.required],
         cityName: ['', Validators.required],
-        taluka: ['', Validators.required],
-        district: ['', Validators.required],
-        state: ['', Validators.required],
-        country: ['', Validators.required],
-        pincode: ['', Validators.required],
+        districtName: ['', Validators.required],
+        stateName: ['', Validators.required],
+        pinCodeNumber: ['', Validators.required],
       }),
       fourthFormGroup: this.fb.group({
-        fourthCtrl: ['', Validators.required],
-        accountHolderName: ['', Validators.required],
+
+
         bankAccountNumber: ['', Validators.required],
         bankName: ['', Validators.required],
-        IFSCCode: ['', Validators.required],
+        ifscNumber: ['', Validators.required],
         branchName: ['', Validators.required],
-        country: ['', Validators.required]
+        cardNumber: ['', Validators.required]
 
       }),
       fifthFormGroup: this.fb.group({
-        fifthCtrl: ['', Validators.required],
+
+
+
+        profileImage: ['', Validators.required],
+        aadhar: ['', Validators.required],
+        pan: ['', Validators.required],
+
+        sign: ['', Validators.required],
+        slip: ['', Validators.required],
+
+        bank: ['', Validators.required],
+        carQuo: ['', Validators.required],
+        itr: ['', Validators.required],
+        form16: ['', Validators.required],
+
       }),
 
     })
   }
 
   SaveCustomer() {
-    let userJson: string = JSON.stringify(this.applyreg.value);
+    console.log("save Customer run")
+
+    let userJson: string = JSON.stringify(this.applyreg.controls['firstFormGroup'].value);
+    let PAddress: string = JSON.stringify(this.applyreg.controls['secondFormGroup'].value);
+    let localAddress: string = JSON.stringify(this.applyreg.controls['thirdFormGroup'].value);
+    let bankdetails: string = JSON.stringify(this.applyreg.controls['fourthFormGroup'].value);
     const formData: FormData = new FormData();
-    formData.append("userJson", userJson);
+    formData.append("customerprofile", userJson);
+    formData.append("customerPermantAddress", PAddress);
+    formData.append("customerLocalAddress", localAddress);
+
+    formData.append("customerBankDetails ", bankdetails);
     formData.append("prof", this.profileImg);
-    formData.append("Aadhar", this.aadhar);
-    formData.append("pan", this.pan);
+    formData.append("adhar", this.aadhar);
+    formData.append("cPan", this.pan);
     formData.append("sign", this.sign);
-    formData.append("slip", this.slip);
-    formData.append("lic", this.lic);
-    formData.append("bank", this.bank);
-    formData.append("carQuo", this.carQuo);
+    formData.append("salaryslip", this.slip);
+
+    formData.append("bankstatement", this.bank);
+    formData.append("quation", this.carQuo);
     formData.append("itr", this.itr);
     formData.append("form16", this.form16);
 
+
+    alert(formData);
     this.cs.createUser(formData).subscribe((data: any) => {
       console.log(data)
+      alert("string");
     }
     )
   }
@@ -119,7 +147,6 @@ export class ApplyloanComponent {
   pan: any;
   sign: any;
   slip: any;
-  lic: any;
   bank: any;
   carQuo: any;
   itr: any;
@@ -140,9 +167,7 @@ export class ApplyloanComponent {
   onSelectSlip(value: any) {
     this.slip = value.target.files[0];
   }
-  onSelectLic(value: any) {
-    this.lic = value.target.files[0];
-  }
+
   onSelectBank(value: any) {
     this.bank = value.target.files[0];
   }
@@ -158,6 +183,32 @@ export class ApplyloanComponent {
   }
 
 
+  get firstform() {
+    return this.applyreg.get("firstFormGroup") as FormGroup;
+  }
+  get secondform() {
+    return this.applyreg.get("secondFormGroup") as FormGroup;
+  }
+
+  get thirdform() {
+    return this.applyreg.get("thirdFormGroup") as FormGroup;
+  }
+
+  get fourthform() {
+    return this.applyreg.get("fourthFormGroup") as FormGroup;
+  }
+  get fifthform() {
+    return this.applyreg.get("fifthFormGroup") as FormGroup;
+  }
+
+
+
+  saveCustomers() {
+    if (this.applyreg.valid) {
+
+      console.log(this.applyreg.value);
+    }
+  }
 
 
 
