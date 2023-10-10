@@ -43,26 +43,26 @@ return this.http.post("http://localhost:9091/customer/save_customer",formData);
   }
   saveEnquiryData(en:Enquiry){
 
-    return this.http.post(this.url+"/postEnquiry",en);
+    return this.http.post("http://localhost:9091/postEnquiry",en);
 
   }
   getEnquiry(){
-    return this.http.get(this.url+"/get_Enquiry");
+    return this.http.get("http://localhost:9091/get_Enquiry");
   }
 
   getEnquiryDetails(enquiryId: number, enquiryObject: Enquiry) {
     return this.http
-      .put(this.url + "/getCibilScore/" + enquiryId, enquiryObject)
+      .put("http://localhost:9091/getCibilScore/" + enquiryId, enquiryObject)
       .subscribe();
   }
   approveEnquiry(enquiryId: number, enquiryObject: Enquiry){
     return this.http
-      .put(this.url + "/approveEnquiry/" + enquiryId, enquiryObject)
+      .put("http://localhost:9091/approveEnquiry/" + enquiryId, enquiryObject)
       .subscribe();
   }
   rejectEnquiry(enquiryId: number, enquiryObject: Enquiry){
     return this.http
-      .put(this.url + "/rejectEnquiry/" + enquiryId, enquiryObject)
+      .put("http://localhost:9091/rejectEnquiry/" + enquiryId, enquiryObject)
       .subscribe();
   }
 }
