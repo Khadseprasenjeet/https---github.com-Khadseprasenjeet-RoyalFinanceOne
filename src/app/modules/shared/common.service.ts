@@ -74,4 +74,10 @@ return this.http.post("http://localhost:9091/customer/save_customer",formData);
       .put("http://localhost:9091/rejectEnquiry/" + enquiryId, enquiryObject)
       .subscribe();
   }
+
+//get customer
+getcustomer(){
+  return this.http.get("http://abhishek:9091/customer/getcustomer")
+}
+
 }

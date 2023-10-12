@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <div class=" text-center mt-5 ">
+     <h2> <b>View All Data</b></h2>
+   </div>
+   
+ 
+ 
+   <div class="container">
+     
+       <table class="table table-striped" border="8 Solid Black">
+         <tbody >
+           <tr>
+           <th scope="col">ENQUIRY ID</th>
+           <th scope="col">CUSTOMER NAME</th>       
+           <th scope="col">PAN CARD NO. </th>
+           <th scope="col">Email </th>
+           <th scope="col">DATE OF BIRTH</th>
+           <th scope="col">MOBILE NO.</th>
+           
+           
+           
+         </tr>
+           <tr *ngFor="let e of cus">
+              
+               <td>{{e.customerId}}</td>
+               <td>{{e.firstName}}</td>
+               <td>{{e.pan}}</td>
+               <td>{{e.email}}</td>
+               <td>{{e.dob}}</td>
+               <td>{{e.mobileNumber}}</td>
+              
+               
+               </tr>
+           </tbody>
+         </table>
+       </div>
+     </div>

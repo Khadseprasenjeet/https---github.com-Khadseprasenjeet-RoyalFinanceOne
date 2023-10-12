@@ -38,6 +38,9 @@ c:customerclass={
   updatEnquiry(c:customerclass){
   return this.http.put("http://localhost:9091/getCibilScore/"+c.id,c)
   }
+  getcustomer(){
+    return this.http.get("http://abhishek:9091/customer/getcustomer");
+  }
 
 
 }
