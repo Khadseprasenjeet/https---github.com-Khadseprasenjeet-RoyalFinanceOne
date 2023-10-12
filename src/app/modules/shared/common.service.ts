@@ -1,12 +1,21 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { CIBILScore } from 'src/app/model/cibilscore';
+import { Employee } from 'src/app/model/employee';
 import { Enquiry } from 'src/app/model/enquiry';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CommonService {
+  getEmployee() {
+     alert("data servive");
+   return  this.http.get("http://localhost:9091/getEmployee");
+   
+  }
+  createEmployee(formData: FormData) {
+   return this.http.post("http://localhost:9091/saveEmployee",formData);
+  }
   file(file: any) {
     throw new Error('Method not implemented.');
   }

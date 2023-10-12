@@ -21,7 +21,7 @@ export class CheckcibilComponent {
   sp: number;
   full: number;
   emi: number;
-    interestt: number;
+    interest: number;
     total: number;
     emiForm: FormGroup;
     panNumber: string;
@@ -34,6 +34,8 @@ export class CheckcibilComponent {
         panNumber: ['', Validators.required],
         name:['', Validators.required],
          date: ['', Validators.required],
+         interest:['',Validators.required],
+         tenure:[]
       })
       const modeldiv=document.getElementById('myModal');
   if(modeldiv!=null)

@@ -1,1 +1,47 @@
-<p>view-employee works!</p>
+<table class="table" border="2">
+    
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+    
+        <th scope="col">Email ID</th>
+        <th scope="col">Mobile Number</th>
+        <th scope="col">Designation</th>
+        <th>Profile Image</th>
+        <th>Adhar Card</th>
+        <th>PAN Card</th>
+        <th>Signature</th>
+      
+    </tr>  
+    
+      <tr *ngFor="let p of enqq">
+        <td> {{p.employeeId}} </td>
+        <td> {{p.employeeName}} </td>
+        <td> {{p.employeeAdress }} </td>
+        <td> {{p.employeeEmail }} </td>
+        <td> {{p.employeeNumber }} </td>
+        <td> {{p.employeeRole }} </td>
+        <td>
+            <img [src]="'data:image/png;base64,'+p.photo" height="75px" width="75px">
+        </td>
+        
+         <td>
+            <img [src]="'data:image/png;base64,'+p.adhar" height="75px" width="75px">
+        </td>
+         <td>
+            <img [src]="'data:image/png;base64,'+p.pan" height="75px" width="75px">
+        </td>
+        <td>
+            <img [src]="'data:image/png;base64,'+p.sign" height="75px" width="75px">
+        </td>
+
+      
+       
+        <td><button routerLink="/application/oe/view_all">checkcibil</button></td>
+        
+        
+      </tr>
+      
+  </table>
+  <router-outlet></router-outlet>

@@ -16,7 +16,7 @@ export class CreateenquiryComponent {
 
     this.enquiryForm=this.fb.group({
     
-      // id:[],
+     
       customerName:['Daniel',[Validators.required]],
       pancardNumber:['GKZPK9636P'],
       customerMobileNumber:[8788164114],

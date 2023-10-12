@@ -32,11 +32,11 @@ c:customerclass={
   }
 
   getEnqury(){
-    return this.http.get("http://localhost:3000/customerclass");
+    return this.http.get("http://localhost:9091/getCustomer");
   }
 
   updatEnquiry(c:customerclass){
-  return this.http.put("http://localhost:3000/customerclass/"+c.id,c)
+  return this.http.put("http://localhost:9091/getCibilScore/"+c.id,c)
   }
 
 
