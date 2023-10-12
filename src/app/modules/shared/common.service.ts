@@ -80,4 +80,7 @@ getcustomer(){
   return this.http.get("http://abhishek:9091/customer/getcustomer")
 }
 
+getDocuments(){
+  return this.http.get("http://abhishek:9091/document/getdoc");
+}
 }

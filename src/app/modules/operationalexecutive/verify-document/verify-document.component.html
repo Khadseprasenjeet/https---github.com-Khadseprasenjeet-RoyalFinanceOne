@@ -1,1 +1,46 @@
-<p>verify-document works!</p>
+<table  border="2">
+    <thead>
+      <tr>
+        <th>Customer Name</th>
+        <th>Photo</th>
+        <th>PanCard</th>
+        <th>BankStatement</th>
+        <th>salarySlips</th>
+        <th>adharCard</th>
+        <th>Sinnature</th>
+        <th>CarQuqtation</th>
+        <th>Form16</th>
+        <Th>ITR</Th>
+      </tr>
+    </thead>
+    <tbody *ngIf=doc>
+      <tr >
+        <td>{{customerName}}</td>
+        <td><img [src]="'data:image/jpeg;base64,'+doc.customerProfilePhoto" height="150"></td>
+        <td><img [src]="'data:image/jpeg;base64,'+doc.customerPan" height="150"></td>
+        <td> <img [src]="'data:image/jpeg;base64,'+doc.customerBAnkStatement" height="150"></td>
+        <td> <img [src]="'data:image/jpeg;base64,'+doc.customerSalarySlip" height="150"></td>
+        <td> <img [src]="'data:image/jpeg;base64,'+doc.customerAdhar" height="150"></td>
+        <td> <img [src]="'data:image/jpeg;base64,'+doc.customerSignature" height="150"></td>
+        <td> <img [src]="'data:image/jpeg;base64,'+doc.customerCarQuotation" height="150"></td>
+        <td> <img [src]="'data:image/jpeg;base64,'+doc.customerForm16" height="150"></td>
+        <td> <img [src]="'data:image/jpeg;base64,'+doc.customerITR" height="150"></td>
+       
+      </tr>
+      </tbody>
+  </table>
+  <br>
+  <br>
+
+  <!-- <div>
+    <button routerLink="/application/cm/bank_details" style="background-color: green; color: white; width: 100px;height: 40px;">Verified</button>
+  </div> -->
+          &nbsp;  &nbsp;  &nbsp;
+  <!-- <div>
+    <button routerLink="/role/cr/credit" style="background-color: green; color: white; width: 100px;height: 40px;">Reject</button>
+  </div> -->
+          &nbsp;  &nbsp;  &nbsp;
+  <!-- <div>
+    <button routerLink="/application/cm/bank_details" style="background-color: green; color: white; width: 100px;height: 40px;">Back</button>
+  </div> -->
+  
