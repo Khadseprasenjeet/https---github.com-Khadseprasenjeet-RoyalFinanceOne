@@ -32,7 +32,7 @@ c:customerclass={
   }
 
   getEnqury(){
-    return this.http.get("http://localhost:9091/getCustomer");
+    return this.http.get("http://localhost:9091/get_Enquiry");
   }
 
   updatEnquiry(c:customerclass){
