@@ -65,4 +65,10 @@ return this.http.post("http://localhost:9091/customer/save_customer",formData);
       .put(this.url + "/rejectEnquiry/" + enquiryId, enquiryObject)
       .subscribe();
   }
+
+//get customer
+getcustomer(){
+  return this.http.get("http://abhishek:9091/customer/getcustomer")
+}
+
 }

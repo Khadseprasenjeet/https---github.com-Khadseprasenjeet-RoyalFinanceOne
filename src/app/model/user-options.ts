@@ -12,7 +12,8 @@ export class UserOptions {
             oe:[
               {label:'View All' , path:'view_all'},
               {label:'Check cibil' , path:'check_cibil'},
-              {label:'Verify Documents' , path :'verify_doc'},
+              {label:'View All Loan' , path :'view Apply loan'},
+              {label:'Verify Document' , path:'view_document'}
          
               ],
               cm:[
