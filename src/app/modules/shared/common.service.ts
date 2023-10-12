@@ -77,7 +77,7 @@ return this.http.post("http://localhost:9091/customer/save_customer",formData);
 
 //get customer
 getcustomer(){
-  return this.http.get("http://abhishek:9091/customer/getcustomer")
+  return this.http.get("http://localhost:9091/customer/getcustomer")
 }
 
 getDocuments(){

@@ -14,7 +14,10 @@ import { OeService } from 'src/app/services/oe.service';
 export class CheckcibilComponent {
   constructor(private route:Router, private fb:FormBuilder,private common:CommonService,private dialog:MatDialog ,private oe:OeService){
   }
-  
+  close(){
+    this.dialog.closeAll()
+  }
+
   top: number;
   monthlyInterestRatio: number;
   bottom: number;
@@ -88,8 +91,5 @@ export class CheckcibilComponent {
 
   
 
-    close(){
-      this.dialog.closeAll()
-    }
-
+   
 }
