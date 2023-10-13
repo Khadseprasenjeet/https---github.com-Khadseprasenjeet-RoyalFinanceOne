@@ -9,24 +9,24 @@ export class UsertypePipe implements PipeTransform {
 
     if(value=='re')
        {
-         return "RelationShip Execetive..!"
+         return "RELATIONSHIP EXECUTIVE"
        }
        else if(value=='oe')
        {
-         return "Operational Execetive..!"
+         return "OPERATIONAL EXECUTIVE"
        }
        else if(value=='cm')
        {
-        return "Chief Manager...!"
+        return "CREDIT MANAGER"
        }
        else if(value=='ah')
        {
-        return "Account Head..!"
+        return "ACCOUNT HEAD"
 
        }
        else if(value=='admin')
        {
-        return "Admin ..!"
+        return "ADMIN"
 
        }
     return null;
