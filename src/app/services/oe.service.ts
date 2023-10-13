@@ -32,14 +32,14 @@ c:customerclass={
   }
 
   getEnqury(){
-    return this.http.get("http://localhost:9091/get_Enquiry");
+    return this.http.get("http://localhost:3000/customerclass");
   }
 
   updatEnquiry(c:customerclass){
-  return this.http.put("http://localhost:9091/getCibilScore/"+c.id,c)
+  return this.http.put("http://localhost:3000/customerclass/"+c.id,c)
   }
   getcustomer(){
-    return this.http.get("http://abhishek:9091/customer/getcustomer");
+    return this.http.get("http://localhost:3000/customerclass");
   }
 
 

@@ -36,17 +36,16 @@ alert(this.oe.c.bankDatail.cibilScore)
   }
 accpet(c:customerclass){
   this.oe.c = Object.assign({},c)
-  this.oe.c.bankDatail.cibilStatus="Pass by OE"
+  this.oe.c.bankDatail.cibilStatus="Application Passed By Operational Executive"
   this.oe.updatEnquiry(this.oe.c).subscribe();
 }
 
 rejectd(c:customerclass){
   this.oe.c = Object.assign({},c)
-  this.oe.c.bankDatail.cibilStatus="Reject by OE"
+  this.oe.c.bankDatail.cibilStatus="Application Rejected By Operational Executive"
   this.oe.updatEnquiry(this.oe.c).subscribe();
 }
 
 
-reject(){}
 
 }

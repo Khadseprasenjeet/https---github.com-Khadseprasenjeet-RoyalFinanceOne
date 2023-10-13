@@ -14,7 +14,7 @@ import { OeService } from 'src/app/services/oe.service';
 export class CheckcibilComponent {
   constructor(private route:Router, private fb:FormBuilder,private common:CommonService,private dialog:MatDialog ,private oe:OeService){
   }
-  close(){
+  closed(){
     this.dialog.closeAll()
   }
 
