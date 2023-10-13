@@ -29,7 +29,6 @@ export class ViewAllenquiryComponent {
 
   
   checkcibil( c:customerclass){
-alert(this.oe.c.bankDatail.cibilScore)
     this.oe.c = Object.assign({},c)
 
     this.dialog.open(CheckcibilComponent)
