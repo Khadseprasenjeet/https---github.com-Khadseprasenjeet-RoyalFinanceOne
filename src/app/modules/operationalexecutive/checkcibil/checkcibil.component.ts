@@ -83,7 +83,7 @@ export class CheckcibilComponent {
           return  ;}
        // Generate a random number for CIBIL score (between 400 and 900)
       this.cibil = Math.floor(Math.random() * (900 - 500 )) + 400;
-        this.oe.c.bankDatail.cibilScore=this.cibil;
+        this.oe.c.cibilScore.cibilScore=this.cibil;
       
       this.oe.updatEnquiry(this.oe.c).subscribe();
     }
