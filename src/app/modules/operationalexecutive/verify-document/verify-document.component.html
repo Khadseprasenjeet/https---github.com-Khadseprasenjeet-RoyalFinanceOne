@@ -13,8 +13,8 @@
         <Th>ITR</Th>
       </tr>
     </thead>
-    <tbody *ngIf=doc>
-      <tr >
+    <tbody >
+      <tr *ngIf=doc >
         <td>{{customerName}}</td>
         <td><img [src]="'data:image/jpeg;base64,'+doc.customerProfilePhoto" height="150"></td>
         <td><img [src]="'data:image/jpeg;base64,'+doc.customerPan" height="150"></td>
