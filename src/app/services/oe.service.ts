@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Customer } from '../model/customer';
-import { customerclass } from '../class/customerclass';
-import { Bankdetails } from '../class/bankdetails';
 import { HttpClient } from '@angular/common/http';
+import { Enquiry } from '../model/enquiry';
 
 @Injectable({
   providedIn: 'root'
@@ -11,35 +9,31 @@ export class OeService {
 
   constructor(private http:HttpClient) { }
 
-c:customerclass={
-  id: 0,
-  customerName: '',
-  pancardNumber: '',
+c:Enquiry={
+  enquiryId: 0,
+  customerName: undefined,
+  pancardNumber: 0,
   customerMobileNumber: 0,
   customerAlternateMobileNumber: 0,
-  customerEmailId: '',
-  customerDateOfBirth: undefined,
-  bankDatail: {
-    bankAccountNumber: 0,
-    bankName: '',
-    branchName: '',
-    ifscCode: '',
-    cardNumber: 0,
+  customerEmailId: undefined,
+  customerDateOfBirth: 0,
+  enquiryStatus: '',
+  cibilScore: {
+    cibilId: 0,
     cibilScore: 0,
-    id: 0,
-    cibilStatus: ''
+    cibilRemark: ''
   }
-  }
+}
 
   getEnqury(){
-    return this.http.get("http://localhost:9091/get_Enquiry");
+    return this.http.get("");
   }
 
-  updatEnquiry(c:customerclass){
-  return this.http.put("http://localhost:9091/getCibilScore/"+c.id,c)
+  updatEnquiry(c:Enquiry){
+  return this.http.put("",c)
   }
   getcustomer(){
-    return this.http.get("http://abhishek:9091/customer/getcustomer");
+    return this.http.get("");
   }
 
 

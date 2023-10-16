@@ -14,7 +14,10 @@ import { OeService } from 'src/app/services/oe.service';
 export class CheckcibilComponent {
   constructor(private route:Router, private fb:FormBuilder,private common:CommonService,private dialog:MatDialog ,private oe:OeService){
   }
-  
+  closed(){
+    this.dialog.closeAll()
+  }
+
   top: number;
   monthlyInterestRatio: number;
   bottom: number;
@@ -79,7 +82,7 @@ export class CheckcibilComponent {
           return  ;}
        // Generate a random number for CIBIL score (between 400 and 900)
       this.cibil = Math.floor(Math.random() * (900 - 500 )) + 400;
-        this.oe.c.bankDatail.cibilScore=this.cibil;
+        this.oe.c.cibilScore.cibilScore=this.cibil;
       
       this.oe.updatEnquiry(this.oe.c).subscribe();
     }
@@ -87,8 +90,5 @@ export class CheckcibilComponent {
 
   
 
-    close(){
-      this.dialog.closeAll()
-    }
-
+   
 }

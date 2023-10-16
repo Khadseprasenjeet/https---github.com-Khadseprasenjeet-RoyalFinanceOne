@@ -15,8 +15,8 @@
         "branchName": "cjc",
         "ifscCode": "lk766",
         "cardNumber": 8779546621,
-        "cibilScore": 533,
-        "cibilStatus": "Reject by OE"
+        "cibilScore": 756,
+        "cibilStatus": "Application Passed By Operational Executive"
       }
     },
     {
@@ -34,8 +34,8 @@
         "branchName": "cjc",
         "ifscCode": "lk766",
         "cardNumber": 8779546621,
-        "cibilScore": 0,
-        "cibilStatus": "pending"
+        "cibilScore": 798,
+        "cibilStatus": "Application Passed By Operational Executive"
       }
     },
     {
@@ -72,8 +72,8 @@
         "branchName": "cjc",
         "ifscCode": "lk766",
         "cardNumber": 8779546621,
-        "cibilScore": 0,
-        "cibilStatus": "pending"
+        "cibilScore": 596,
+        "cibilStatus": "Application Passed By Operational Executive"
       }
     }
   ],

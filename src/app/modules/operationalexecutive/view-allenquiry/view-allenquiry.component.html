@@ -25,7 +25,7 @@
       </tr>         
         <tr *ngFor="let p of eqruiry">
           
-          <td>{{p.id}}</td>
+          <td>{{p.enquiryId}}</td>
           <td>{{p.customerName}}</td>
           <td>{{p.pancardNumber}}</td>
           <td>{{p.customerMobileNumber}}</td>
@@ -34,10 +34,10 @@
           <td>{{p.customerDateOfBirth}}</td>
           <td><button (click)="checkcibil(p)" >checkcibil</button></td>
           <!-- (click)="conform()" -->
-          <td>{{p.bankDatail.cibilScore}} </td>
+          <td>{{p.cibilScore.cibilScore}} </td>
           <td><button (click)="rejectd(p)" >Reject</button>
              <button (click)="accpet(p)" >Accecpt</button></td> 
-              <td style="color: aliceblue;">{{p.bankDatail.cibilStatus}}</td>
+              <td style="color: aliceblue;">{{p.cibilScore.cibilRemark}}</td>
         
     </table>
    </div>
